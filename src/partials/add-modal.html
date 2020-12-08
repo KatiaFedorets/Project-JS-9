@@ -1,7 +1,7 @@
 <div class="add-modal">
   <h2>Додати оголошення</h2>
 
-  
+  <form action="" method="">
   <div class="add-modal-field">
     <label class="add-modal-label" for="name">Назва товару</label>
     <input
@@ -14,7 +14,13 @@
   </div>
 
   <div class="add-modal-field">
-    <!-- Фото -->
+    <label class="add-modal-label" for="photo">Фото</label>
+    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
   </div>
 
   <div class="add-modal-field">
@@ -29,15 +35,13 @@
   </div>
 
   <div class="add-modal-field">
-    <!-- Сделать выпадающее меню для категорий товара -->
     <label class="add-modal-label" for="category">Категорія товару</label>
-    <input
-      class="add-modal-input"
-      type="text"
-      name="category"
-      id="category"
-      placeholder=" "
-    />
+    <select class="add-modal-input" id="category" name="category">
+      <option value="sales">Розпродаж | Різне</option>
+      <option value="recreationAndSport">Відпочинок і спорт</option>
+      <option value="free">Віддам безкоштовно</option>
+      <option value="businessAndServices">Бізнес та послуги</option>
+    </select>
   </div>
 
   <div class="add-modal-field">
@@ -52,12 +56,14 @@
   </div>
 
   <div class="add-modal-field">
-    <label class="add-modal-label" for="phone">Телефон</label>
+    <label class="add-modal-label" for="telephone">Телефон</label>
     <input
       class="add-modal-input"
-      type="text"
-      name="phone"
-      id="phone"
+      type="tel"
+      name="telephone"
+      id="telephone"
       placeholder="+38 (0--) --- -- --"
     />
+
+  </form>
   </div>

@@ -1,0 +1,18 @@
+{{#each this}}
+<li class="product-card">
+  <div class="product-card-container">
+    <a class="product-card-link" href="">
+
+      {{#each this.imageUrls}}
+      <img class="product-image" src="{{imageUrls}}" alt="{{description}}" />
+      {{/each}}
+      
+      <div class="product-info-container">
+        <p class="product-title">{{title}}</p>
+        <p class="product-old-price">{{oldPrice}} грн</p>
+        <p class="product-price">{{price}} грн</p>
+      </div>
+    </a>
+  </div>
+</li>
+{{/each}}
