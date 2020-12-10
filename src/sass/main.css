@@ -3,4 +3,582 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #555555;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+}
+
+address {
+  font-style: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  height: 70px;
+  width: 70px;
+}
+
+.container {
+  max-width: 767px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1259px) {
+  .container {
+    max-width: 768px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .container {
+    max-width: 1260px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.container.header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-bottom: 1px solid #e2e3e5;
+}
+
+.logo-header {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .logo-header {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.login-button {
+  margin-left: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .login-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .login-button {
+    display: none;
+  }
+}
+
+.login-button-tablet {
+  min-width: 130px;
+  margin-right: 20px;
+  margin-left: 230px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+@media screen and (max-width: 1259px) {
+  .login-button-tablet {
+    display: none;
+  }
+}
+
+.create-ad {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ff6b09;
+  min-width: 188px;
+}
+
+@media screen and (max-width: 767px) {
+  .create-ad {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search-button {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-button {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search-button-tablet {
+    display: none;
+  }
+}
+
+.menu-button {
+  padding: 25px;
+  border-right: 1px solid #e2e3e5;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button-tablet {
+  padding: 25px;
+  border-right: 1px solid #e2e3e5;
+}
+
+@media screen and (min-width: 1260px) {
+  .menu-button-tablet {
+    display: none;
+  }
+}
+
+.button-cleanup {
+  height: 70px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .button-cleanup {
+    display: block;
+    -webkit-transform: translate(550px, 100%);
+            transform: translate(550px, 100%);
+    min-width: 153px;
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .button-cleanup {
+    -webkit-transform: translate(1055px, 67px);
+            transform: translate(1055px, 67px);
+  }
+}
+
+.icon-cleanup {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  margin-right: 11px;
+}
+
+.cleanup-span {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.icon-header-circle {
+  fill: #000000;
+}
+
+.icon-man {
+  fill: #000000;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.button-header {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .button-header {
+    color: inherit;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1259px) {
+  .button-header {
+    margin-bottom: 20px;
+  }
+}
+
+.icon-header {
+  display: none;
+  position: absolute;
+  top: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .icon-header {
+    display: block;
+    right: 39px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .icon-header {
+    right: 15px;
+  }
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .close-button {
+    border-right: 1px solid #e2e3e5;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .close-button {
+    display: none;
+  }
+}
+
+.content {
+  position: absolute;
+}
+
+@media screen and (max-width: 1259px) {
+  .content {
+    display: none;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    padding-top: 70px;
+  }
+}
+
+@media screen and (max-width: 1259px) and (min-width: 768px) {
+  .content {
+    display: none;
+    width: 45%;
+  }
+}
+
+.content.is-open {
+  left: 0;
+  height: auto;
+  display: block;
+  background-color: #f5f6fb;
+}
+
+@media screen and (min-width: 1260px) {
+  .content.is-open {
+    background-color: transparent;
+  }
+}
+
+.menu-button.is-open {
+  position: absolute;
+  right: 0px;
+  top: 75px;
+  -webkit-transition: color 250ms linear;
+  transition: color 250ms linear;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button.is-open {
+    top: 0;
+  }
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-open {
+  display: none;
+}
+
+.header-nav-ul {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.1em;
+  border-top: 1px solid #e2e3e5;
+  border-right: 1px solid #e2e3e5;
+}
+
+@media screen and (min-width: 1260px) {
+  .header-nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    border: none;
+  }
+}
+
+.header-tablet-nav {
+  position: absolute;
+  border-bottom: 1px solid #e2e3e5;
+}
+
+@media screen and (max-width: 767px) {
+  .header-tablet-nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .header-nav-list.desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1259px) {
+  .header-nav-list {
+    border-bottom: 1px solid #e2e3e5;
+    padding: 26px;
+    padding-left: 34px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .header-nav-list {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .header-nav-list:not(:last-child) {
+    margin-right: 36px;
+  }
+}
+
+.submenu-nav {
+  padding: 20px;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.my-cab-menu {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.my-cab-menu:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.icon-submenu-uparrow {
+  -webkit-transform: translate(190px, 30px);
+          transform: translate(190px, 30px);
+  position: absolute;
+}
+
+@media screen and (min-width: 1260px) {
+  .icon-submenu-uparrow {
+    display: none;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+}
+
+.modal {
+  position: relative;
+  padding-top: 50px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 290px;
+  min-height: 152px;
+  background-color: #ff6b09;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    max-width: 650px;
+    min-height: 230px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal {
+    max-width: 860px;
+  }
+}
+
+.search-field {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #ff6b09;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+}
+
+.search-field::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+
+.search-field:-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.search-field::-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.search-field::placeholder {
+  text-transform: uppercase;
+}
+
+.button-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.icon-close {
+  display: inline-block;
+  margin: auto;
+  width: 24px;
+  height: 24px;
+}
 /*# sourceMappingURL=main.css.map */
