@@ -1,0 +1,91 @@
+{{#each this}}
+<div class="add-modal-backdrop">
+    <form class="add-modal" action="" method="">
+        <button class="add-modal-close">
+            x
+            <svg class="add-modal-close-icon">
+                <!-- Нужно добавить Х на закрытие модалки -->
+                <!-- <use href="./images/sprite.svg#icon-close"></use> -->
+            </svg>
+        </button>
+
+        <div class="add-modal-title"><b>Редагувати оголошення</b></div>
+
+        <div class="add-modal-field">
+            <label class="add-modal-label" for="name">Назва товару</label>
+            <input class="add-modal-input" type="text" name="name" id="name" placeholder=" " value="{{title}}" />
+        </div>
+
+        <div class="add-modal-field">
+            <label class="add-modal-label" for="photo">Фото</label>
+
+            <div class="add-photo-input-container">
+                <div class="photo-input-item">
+                    <label class="add-photo-label" for="photo">+</label>
+                    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+                </div>
+
+                <div class="photo-input-item">
+                    <label class="add-photo-label" for="photo">+</label>
+                    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+                </div>
+
+                <div class="photo-input-item">
+                    <label class="add-photo-label" for="photo">+</label>
+                    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+                </div>
+
+                <div class="photo-input-item">
+                    <label class="add-photo-label" for="photo">+</label>
+                    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+                </div>
+
+                <div class="photo-input-item">
+                    <label class="add-photo-label" for="photo">+</label>
+                    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+                </div>
+
+                <div class="photo-input-item">
+                    <label class="add-photo-label" for="photo">+</label>
+                    <input class="add-photo-input" type="file" name="photo" id="photo" accept="image/jpeg,image/png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="add-modal-field">
+            <label class="add-modal-label" for="description">Опис товару</label>
+            <textarea class="add-modal-input add-modal-textarea" name="description" id="description" rows="5"
+                placeholder=" ">
+      {{description}}
+      </textarea>
+        </div>
+
+        <div class="add-modal-field">
+            <label class="add-modal-label" for="category">Категорія товару</label>
+            <select class="add-modal-input input-select" id="category" name="category">
+                <option value="sales">Розпродаж | Різне</option>
+                <option value="recreationAndSport">Відпочинок і спорт</option>
+                <option value="free">Віддам безкоштовно</option>
+                <option value="businessAndServices">Бізнес та послуги</option>
+            </select>
+        </div>
+
+        <div class="add-modal-field">
+            <label class="add-modal-label" for="price">Ціна</label>
+            <input class="add-modal-input" type="text" name="price" id="price" placeholder="0.00 грн"
+                value="{{price}}" />
+        </div>
+
+        <div class="add-modal-field">
+            <label class="add-modal-label" for="telephone">Телефон</label>
+            <input class="add-modal-input" type="tel" name="telephone" id="telephone" placeholder="+38 (0--) --- -- --"
+                value="{{phone}}" />
+        </div>
+
+        <div class="add-modal-button-container">
+            <button class="modal-button" type="submit">Додати</button>
+        </div>
+    </form>
+</div>
+
+{{/each}}
