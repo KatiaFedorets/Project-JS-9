@@ -278,6 +278,12 @@ button {
     left: 0;
     height: auto;
     display: block;
+
+    background-color: #f5f6fb;
+
+    @media screen and (min-width: 1260px) {
+      background-color: transparent;
+    }
   }
 }
 
