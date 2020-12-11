@@ -1,0 +1,118 @@
+.backdrop-authorization {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  z-index: 101;
+
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  overflow-y: scroll;
+}
+
+.backdrop-authorization.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-authorization {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 290px;
+  height: 542;
+  padding: 60px 19px 60px 18px;
+  //   padding-top: 15px;
+  //   padding-left: 18px;
+  //   padding-right: 19px;
+
+  background-color: #f5f6fb;
+}
+
+.authorization-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.14;
+
+  margin-bottom: 20px;
+}
+
+.google-logo {
+  width: 142px;
+  height: 51px;
+
+  padding-top: 16px;
+  padding-left: 34px;
+  padding-bottom: 16px;
+
+  margin-bottom: 41px;
+  background-color: #ffffff;
+}
+
+.icon-google {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.google {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.14;
+}
+
+.input-authorization {
+  width: 253px;
+  height: 56px;
+
+  padding-top: 20px;
+  padding-bottom: 21px;
+  padding-left: 58px;
+
+  margin-bottom: 20px;
+
+  border: solid 1px #bbbbbb;
+}
+
+.button-authurization {
+  width: 119px;
+  height: 50px;
+
+  border: solid 1px #bbbbbb;
+}
+.first-btn {
+  margin-right: 10px;
+  //   margin-bottom: 60px;
+}
+
+.authorization-button-close {
+  position: absolute;
+  bottom: 93%;
+  left: 88%;
+
+  cursor: pointer;
+  fill: black;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.button-authurization:hover,
+.authorization-button-close:hover {
+  border: none;
+  fill: #ffffff;
+  color: #ffffff;
+  background-color: #ff6b09;
+}
