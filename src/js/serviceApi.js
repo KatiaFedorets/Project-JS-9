@@ -5,12 +5,10 @@ const BASE_URL = 'https://callboard-backend.herokuapp.com';
 //Authorization endpoints
 //получает с формы регистрации такой обьект
 
-// const userData = {
-//     email: "user000@example.com",
+// const userD = {
+//     email: "user0090@example.com",
 //     password: "qwerty123",
 // };
-// const userData = JSON.stringify(userD);
-// console.log(userData);
 
 //регистрация юзера
 
@@ -21,7 +19,7 @@ export const registerUser = userData => {
 
 };
 
-// registerUser(userData);
+// registerUser(userD).then(res => console.log(res));
 
 // логин юзера
 
