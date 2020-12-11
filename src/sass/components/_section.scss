@@ -1,5 +1,10 @@
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
 .section {
-  background-color: #ffffff;
+  background-color: $background-color;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -12,7 +17,6 @@
   padding-top: 0px;
   padding-left: 15px;
   padding-right: 15px;
-  // padding-bottom: 80px;
 
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
@@ -60,6 +64,7 @@
 }
 
 .section-title {
+  font-weight: 700;
   font-size: 12px;
   font-style: bold;
   line-height: 1.21;
@@ -72,7 +77,7 @@
   line-height: 1.21;
 
   margin: 0px;
-  // margin-top: 10px;
+
   margin-left: 20px;
   color: $orange;
 
@@ -91,24 +96,6 @@
   }
 }
 
-// .product-card-others-group {
-//   @media screen and (max-width: $tablet) {
-//     display: none;
-//   }
-//   @media screen and (max-width: $desktop) {
-//     display: none;
-//   }
-
-// }
-
-// .icon-arrow-left {
-//   border-radius: 50%;
-// }
-
-// .icon-arrow-right {
-//   border-radius: 50%;
-// }
-
 .button-left,
 .button-right {
   border-radius: 50%;
@@ -116,6 +103,7 @@
   height: 30px;
   background-color: $whitetext;
   fill: $primary-color;
+  outline: none;
   @media screen and (max-width: 768) {
     display: none;
   }
@@ -134,7 +122,7 @@
 }
 
 .button-right {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
   @media screen and (min-width: $tablet) {
@@ -146,7 +134,7 @@
 }
 
 .button-left {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
   @media screen and (min-width: $tablet) {
@@ -164,7 +152,7 @@
   margin: 0px;
 }
 
-.product-card__my {
+.one-card {
   list-style: none;
   margin: 15px;
   background: #ffffff;
@@ -181,18 +169,18 @@
     width: calc((100% - 8 * 15px) / 4);
   }
 }
-.product-card__my:hover,
-.product-card__my:focus {
+.one-card_:hover,
+.one-card:focus {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.product-img__my {
+.one-img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.button-next-pages {
+.next-page-button {
   font-family: $font-primary;
   font-size: 14px;
   line-height: 1.17;
@@ -210,8 +198,138 @@
   }
 }
 
-.button-next-pages:hover,
-.button-next-pages:focus {
+.next-page-button:hover,
+.next-page-button:focus {
   background-color: $primary-color;
   color: $whitetext;
+}
+
+.container-card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-title {
+  font-family: Montserrat;
+  font-style: Bold;
+  font-size: 12px;
+  line-height: 15px;
+  line-height: 100%;
+  vertical-align: Top;
+  letter-spacing: 9%;
+  fill: Solid $primary-color;
+}
+.product-name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.07em;
+  color: $primary-color;
+}
+.product-sale-price {
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: $orange;
+}
+.product-price {
+  padding-left: 4px;
+  padding-right: 4px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+
+  color: $secondary-color;
+}
+
+.product-content-price {
+  display: flex;
+}
+
+.cards-group {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width: 769px) {
+  }
+}
+.img {
+  width: 100%;
+}
+
+.card {
+  margin-bottom: 20px;
+  background: #ffffff;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    width: calc((100% - 20px) / 2);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1281px) {
+    width: calc((100% - 20px * 3) / 4);
+    margin-right: 20px;
+    margin-bottom: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.card-content {
+  margin: 20px 0px 20px 20px;
+}
+.card-image {
+  position: relative;
+  display: block;
+}
+.card-overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+}
+.card-image:hover .product-overlay,
+.card-image:focus .product-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+.icon-favorite {
+  top: 20px;
+  right: 20px;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+.icon-fullscreen {
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
