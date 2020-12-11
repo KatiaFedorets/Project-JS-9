@@ -5,19 +5,26 @@ const BASE_URL = 'https://callboard-backend.herokuapp.com';
 //Authorization endpoints
 //получает с формы регистрации такой обьект
 
-//const userData = {
-//   email: "user000@example.com",
-//   password: "qwerty123",
-//};
-
+const userD = {
+    email: "user000@example.com",
+    password: "qwerty123",
+};
+const userData = JSON.stringify(userD);
+console.log(userData);
 
 //регистрация юзера
 
 
 export const registerUser = userData => {
-    return axios.post(`${BASE_URL}/auth/register`, userData);
-};
+    const opt = {
+        method: 'POST'
+    }
 
+    // return axios.post(`${BASE_URL}/auth/register`, userData);
+
+    return fetch(`${BASE_URL}/auth/register`, userData, opt);
+};
+registerUser(userData);
 
 // логин юзера
 
