@@ -1,0 +1,53 @@
+.delete-advert-container {
+  display: flex;
+
+  margin-bottom: 30px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.07em;
+  color: #000000;
+  
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+
+  .delete-advert-icon {
+    width: 13px;
+    height: 14px;
+  }
+}
+
+.edit-modal-button-container {
+  display: flex;
+  justify-content: space-between;
+
+  .edit-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    .save-button {
+      width: 119px;
+      height: 50px;
+
+      margin-right: auto;
+
+      @media screen and (min-width: $tablet) {
+        height: 60px;
+      }
+    }
+
+    .cancel-button {
+      width: 119px;
+      height: 50px;
+
+      margin-left: auto;
+      @media screen and (min-width: $tablet) {
+        height: 60px;
+      }
+    }
+  }
+}
