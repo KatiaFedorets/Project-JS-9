@@ -150,7 +150,8 @@ button {
   }
 
   @media screen and (min-width: 1260px) {
-    display: none;
+    // display: none;
+    visibility: hidden;
   }
 }
 
@@ -271,10 +272,8 @@ button {
     }
   }
 
-  @media screen and (min-width: 1260px) {
-  }
-
   &.is-open {
+    z-index: 1;
     left: 0;
     height: auto;
     display: block;
