@@ -1,10 +1,12 @@
 <!-- backdrop -->
+<!-- is-hidden -->
 
 
-
-<div class="backdrop-authorization is-hidden js-backdrop">
+<div class="backdrop-authorization is-hidden" data-modal>
     <div class="modal-authorization">
-        <button type="button" class="authorization-button-close" data-action="close-modal-sauthorization">
+
+
+        <button type="button" class="authorization-button-close" data-modal-close-authModal>
             <svg class="icon-close">
                 <use href="./images/symbol-defs.svg#icon-close"></use>
             </svg>
@@ -18,7 +20,6 @@
         </div>
         <h2 class="authorization-text">Або зайти за допомогою імейлу і пароля, попередньо зареєструвавшись:</h2>
         <form class="register-form">
-
             <input type="email" class="input-authorization" placeholder="E-mail" />
             <input type="password" class="input-authorization" placeholder="Password" />
             <button type="submit" class="first-btn button-authurization">Увійти</button>
