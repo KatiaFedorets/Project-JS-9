@@ -1,17 +1,17 @@
-$mobile: 320px;
-$tablet: 768px;
-$desktop: 1280px;
+// $mobile: 320px;
+// $tablet: 768px;
+// $desktop: 1280px;
 
-$primary-color: #000000;
-$secondary-color: #878686;
-$background-color: #ffffff;
-$whitetext: #ffffff;
-$modaltext: #bbbbbb;
-$orange: #ff6b09;
-$grey: #f5f6fb;
-$containercolor: #e2e3e5;
-$font-family: 'Montserrat', sans-serif;
-$font-family: 'Roboto', sans-serif;
+// $primary-color: #000000;
+// $secondary-color: #878686;
+// $background-color: #e2e3e5;
+// $whitetext: #ffffff;
+// $modaltext: #bbbbbb;
+// $orange: #ff6b09;
+// $grey: #f5f6fb;
+// $containercolor: #e2e3e5;
+// $font-primary: 'Roboto', sans-serif;
+// $font-secondary: 'Montserrat', sans-serif;
 
 .add-modal-backdrop {
   position: fixed;
@@ -57,7 +57,9 @@ $font-family: 'Roboto', sans-serif;
   padding-left: 20px;
   padding-right: 20px;
 
-  background-color: $background-color;
+  font-family: $font-primary;
+  background-color: white;
+
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
 
@@ -85,17 +87,42 @@ $font-family: 'Roboto', sans-serif;
   align-items: center;
   justify-content: center;
 
-  right: 10px;
-  top: 0px;
+  right: 8px;
+  top: 8px;
 
   width: 30px;
   height: 30px;
 
   padding: 0px;
 
-  border: 1px $background-color;
-  background-color: $background-color;
+  border-radius: 50%;
+  border: 1px white;
+  background-color: white;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $orange;
+    transition: all 150ms linear;
+  }
+
+  .add-modal-close-icon {
+    position: absolute;
+    display: block;
+
+    width: 14px;
+    height: 14px;
+
+    fill: #212121;
+
+    transition: all 150ms linear;
+  }
 }
 
 .add-modal-title {
@@ -108,7 +135,7 @@ $font-family: 'Roboto', sans-serif;
   line-height: 23px;
   letter-spacing: 0.02em;
 
-  font-family: $font-family;
+  font-family: $font-primary;
   color: $primary-color;
 
   @media screen and (min-width: $tablet) {
@@ -136,6 +163,7 @@ $font-family: 'Roboto', sans-serif;
   display: flex;
 
   align-items: center;
+  justify-content: center;
 
   width: 100%;
   height: 56px;
@@ -155,6 +183,10 @@ $font-family: 'Roboto', sans-serif;
   }
 }
 
+.add-modal-textarea {
+  resize: vertical;
+}
+
 .input-select {
   padding: 10px;
 }
@@ -163,42 +195,51 @@ $font-family: 'Roboto', sans-serif;
   display: flex;
   flex-wrap: wrap;
 
-  margin: -5px;
-
   @media screen and (min-width: $tablet) {
-    width: 458px;
+    width: 468px;
+    flex-wrap: nowrap;
 
+    margin: -5px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 450px;
     flex-wrap: nowrap;
   }
 
   .photo-input-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    height: 46px;
+
     width: calc((100% - 6 * 5px) / 3);
     margin: 5px;
 
+    color: $modaltext;
+    background: $grey;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+
     @media screen and (min-width: $tablet) {
+      width: 83px;
+      height: 50px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 78px;
+      height: 50px;
     }
 
     .add-photo-input {
-      display: flex;
+      width: 0;
       height: 0;
       padding: 0;
       opacity: 0;
-    }
-
-    .add-photo-label {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      width: 77px;
-      height: 46px;
-
-      font-style: normal;
-      font-weight: normal;
-      font-size: 22px;
-      line-height: 26px;
-      color: $modaltext;
-      background: $grey;
     }
   }
 }
