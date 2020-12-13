@@ -5,3 +5,6 @@ import './js/openMenuHeader';
 
 // import './js/registerUser';
 // import "./js/open-modal-search";
+
+// import './js/fetch-categories-modal';
+
