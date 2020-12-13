@@ -5,7 +5,9 @@ import './js/openMenuHeader';
 import './js/hiddenNavSubmenu.js';
 import './js/smoothieSkrollToAnchors.js';
 
-// import './js/registerUser';
-// import "./js/open-modal-search";
+import './js/registerUser';
+import './js/open-modal-search.js';
+import './js/open-modal-create-ads';
 
 // import './js/fetch-categories-modal';
+

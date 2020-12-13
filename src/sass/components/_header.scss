@@ -120,13 +120,16 @@ button {
   background-color: #ff6b09;
 
   min-width: 188px;
-
+  cursor: pointer;
   @media screen and (max-width: 767px) {
     display: none;
   }
 }
 
 .search-button {
+  cursor: pointer;
+  
+  
   @media screen and (max-width: 767px) {
     display: block;
   }

@@ -1,6 +1,6 @@
 const refs = {
-    openModalBtn: document.querySelector('[data-action="open-modal-search"]'),
-    closeModalBtn: document.querySelector('[data-action="close-modal-search"]'),
+    openModalBtn: document.querySelector('.search-button'),
+    closeModalBtn: document.querySelector('.button-close'),
     backdrop: document.querySelector('.js-backdrop'),
 };
 
