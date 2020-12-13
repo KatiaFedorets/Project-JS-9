@@ -1,0 +1,57 @@
+  <!-- модальне вікно з описом товару -->  
+    <div class="product-modal">
+      <button class="product-modal__close-btn">
+        <svg class="icon" width="14" height="14">
+          <use href="./images/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <!-- карусель для планшета та десктопа -->
+    <div class="carousel-container">
+      <div class="product-modal__carousel">
+        {{#each imageUrls}}
+          <div class="carousel-item"><img class="image" src="{{imageUrls}}" alt="{{title}}" /></div>
+        {{/each}}  
+      </div>
+      <div class="product-modal__carousel-nav">
+        {{#each imageUrls}}
+          <div class="nav-item"><img class="image" src="{{imageUrls}}" alt="{{title}}" /></div>
+        {{/each}} 
+      </div>
+    </div>
+
+    <div class="info-container">
+      <h2 class="product-modal__title">{{title}}</h2>
+      <p class="product-modal__id">Код товару | {{id}}</p>
+
+      <!-- мобільна карусель -->
+      <div class="product-modal__carousel-mobile">
+        {{#each imageUrls}}
+          <div class="carousel-mobile-item"><img class="image" src="{{imageUrls}}" alt="{{title}}" /></div>
+        {{/each}}        
+      </div>     
+
+      <p class="product-modal__price">{{price}} грн</p>
+
+      <!-- кнопка з інформацією про продавця -->
+      <div class="product-modal__seller-info-btn"><p>Інформація про<br />продавця</p>
+        <div class="product-modal__seller-info is-hidden"><p>Ольга <span class="reg-date">- на OLX з {{registrationDate}}</span><br />{{phone}}</p></div>
+      </div>
+
+      <div class="product-modal__wrapper">
+        <P class="product-modal__favorite">В обране</P>
+        <svg class="icon" width="14" height="12">
+            <use href="./images/symbol-defs.svg#icon-heart-favorite"></use>
+        </svg>
+
+        <P class="product-modal__share">Поділитися</P>
+        <svg class="icon" width="15" height="16">
+            <use href="./images/symbol-defs.svg#icon-share-btn"></use>
+        </svg>
+      </div>      
+
+      <!-- опис товару -->
+      <h3 class="product-modal__description-title">Опис:</h3>
+      <P class="product-modal__description-text">{{description}}</P>
+    </div>
+    </div>
