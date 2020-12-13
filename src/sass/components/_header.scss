@@ -87,9 +87,9 @@ button {
 
 .login-button-tablet {
   min-width: 130px;
-cursor: pointer;
+  cursor: pointer;
   @media screen and (max-width: 1259px) {
-    // display: none;
+    display: none;
   }
   margin-right: 20px;
   margin-left: 230px;
@@ -145,18 +145,14 @@ cursor: pointer;
   padding: 25px;
   border-right: 1px solid #e2e3e5;
 
-  
-
   @media screen and (min-width: 768px) {
     transform: translateY(100%);
   }
 
   @media screen and (min-width: 1260px) {
-
     // display: none;
     visibility: hidden;
     // transform: scale(0);
-
   }
 }
 
@@ -170,18 +166,24 @@ cursor: pointer;
   }
 }
 
+.menu-button-desktop {
+  @media screen and (max-width: 1259px) {
+    display: none;
+  }
+}
+
 .button-cleanup {
   height: 70px;
   display: none;
 
   @media screen and (min-width: 768px) {
     display: block;
-    transform: translate(550px, 100%);
-    min-width: 153px;
+    transform: translate(550px, 89%);
+    min-width: 157px;
     position: absolute;
   }
   @media screen and (min-width: 1260px) {
-    transform: translate(1055px, 67px);
+    transform: translate(1055px, 60px);
   }
 }
 
@@ -315,12 +317,14 @@ cursor: pointer;
 // List  BACKDROP MENU
 
 .header-nav-ul {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto, sans-serif;
   font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 1.39;
-  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: #000000;
 
   border-top: 1px solid #e2e3e5;
   border-right: 1px solid #e2e3e5;
@@ -328,7 +332,7 @@ cursor: pointer;
   @media screen and (min-width: 1260px) {
     display: flex;
     flex-direction: row;
-    transform: translateY(70px);
+    transform: translate(30px, 65px);
 
     border: none;
   }
@@ -343,32 +347,45 @@ cursor: pointer;
 }
 
 .header-nav-list.desktop {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.14;
+  // display: flex;
+  // align-items: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000000;
   @media screen and (min-width: 1260px) {
     display: none;
-    // position: relative;
   }
 }
 
-// .header-nav-list.desktop.my-cab {
-//   transform: translate(90px, 10px);
-// }
+.header-nav-list.desktop.my-cab {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
 
-// .header-nav-list.desktop.login {
-//   display: inline-flex;
-// }
+  letter-spacing: 0.02em;
 
-// .header-nav-list.desktop.login::before {
-//   content: '';
-//   display: inline-block;
-//   width: 24px;
-//   height: 24px;
-//   margin-right: 10px;
-//   background-color: red;
-//   background-image: url('../../images/icomoon/sprite.svg#icon-header-man');
-// }
+  color: #000000;
+}
 
 .header-nav-list {
   @media screen and (max-width: 1259px) {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+
+    letter-spacing: 0.02em;
+
+    color: #000000;
+
     border-bottom: 1px solid #e2e3e5;
     padding: 26px;
     padding-left: 34px;
@@ -400,6 +417,22 @@ cursor: pointer;
 
   transform: translateX(10px);
 }
+.submenu-nav-header {
+  position: absolute;
+  padding: 20px;
+  min-width: 206px;
+
+  background: #f5f6fb;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
+
+  transform: translate(827px, 84px);
+
+  z-index: 3;
+
+  @media screen and (max-width: 1259px) {
+    display: none;
+  }
+}
 
 // .submenu-login {
 //   padding: 20px;
@@ -429,10 +462,45 @@ cursor: pointer;
 }
 
 .icon-submenu-uparrow {
-  transform: translate(190px, 30px);
+  transform: translate(190px, 25px);
   position: absolute;
 
   @media screen and (min-width: 1260px) {
+    display: none;
+  }
+}
+
+.icon-submenu-downarrow {
+  transform: translate(190px, 25px);
+  position: absolute;
+
+  @media screen and (min-width: 1260px) {
+    display: none;
+  }
+}
+
+.icon-submenu-registration {
+  margin-right: 10px;
+}
+
+.header-my-cab {
+  width: auto;
+  padding: 25px;
+  border-right: 1px solid #e2e3e5;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  margin-left: 221px;
+  // margin-right: 18px;
+
+  @media screen and (max-width: 1259px) {
     display: none;
   }
 }
