@@ -417,6 +417,7 @@ button {
 
   transform: translateX(10px);
 }
+
 .submenu-nav-header {
   position: absolute;
   padding: 20px;
@@ -428,10 +429,15 @@ button {
   transform: translate(827px, 84px);
 
   z-index: 3;
+  display: none;
 
   @media screen and (max-width: 1259px) {
     display: none;
   }
+}
+
+.submenu-nav-header.focus {
+  display: block;
 }
 
 // .submenu-login {
@@ -504,3 +510,6 @@ button {
     display: none;
   }
 }
+// .header-my-cab:focus .submenu-nav-header {
+//   display: block;
+// }
