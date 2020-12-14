@@ -128,8 +128,7 @@ button {
 
 .search-button {
   cursor: pointer;
-  
-  
+
   @media screen and (max-width: 767px) {
     display: block;
   }
@@ -272,7 +271,7 @@ button {
     // background-color: $alternative-tittle-color;
 
     height: 100%;
-    width: 100%;
+    // width: 100%;
 
     padding-top: 70px;
 
@@ -285,16 +284,23 @@ button {
   &.is-open {
     z-index: 1;
     left: 0;
-    height: auto;
     display: block;
-
     background-color: #f5f6fb;
+    position: fixed;
+    top: 0;
+    min-width: 338px;
 
     @media screen and (min-width: 1260px) {
       background-color: transparent;
+      left: auto;
+      top: auto;
     }
   }
 }
+
+// .hidden {
+//   overflow: hidden;
+// }
 
 .menu-button.is-open {
   position: absolute;
@@ -419,6 +425,7 @@ button {
   padding: 20px;
 
   transform: translateX(10px);
+  // display: none;
 }
 
 .submenu-nav-header {
@@ -513,6 +520,3 @@ button {
     display: none;
   }
 }
-// .header-my-cab:focus .submenu-nav-header {
-//   display: block;
-// }
