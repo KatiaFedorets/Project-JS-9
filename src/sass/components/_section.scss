@@ -39,15 +39,12 @@ ul {
 .categories {
   @media screen and (max-width: $tablet) {
     overflow: hidden;
-    height: 783px;
   }
   @media screen and (min-width: $tablet) {
     overflow: hidden;
-    height: 500px;
   }
   @media screen and (min-width: $desktop) {
     overflow: hidden;
-    height: 500px;
   }
 }
 
@@ -171,7 +168,6 @@ ul {
   // }
   @media screen and (min-width: $tablet) {
     width: calc((100% - 4 * 15px) / 2);
-    margin: 15px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -184,12 +180,12 @@ ul {
 }
 
 .one-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
 }
 
 .next-page-button {
+  width: 50px;
+  height: 50px;
   font-family: $font-primary;
   font-size: 14px;
   line-height: 1.17;
@@ -204,6 +200,8 @@ ul {
   @media screen and (min-width: $tablet) {
     margin-top: 60px;
     margin-bottom: 60px;
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -250,7 +248,6 @@ ul {
 }
 
 .product-presale-price {
-  margin-bottom: 20px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -287,14 +284,13 @@ ul {
 }
 
 .card {
-  margin-bottom: 20px;
   background: #ffffff;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
-
+  margin-bottom: 30px;
   @media screen and (min-width: 768px) and (max-width: 1280px) {
     width: calc((100% - 20px) / 2);
     margin-right: 20px;
-    margin-bottom: 20px;
+
     &:nth-child(2n) {
       margin-right: 0;
     }
