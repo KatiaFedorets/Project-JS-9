@@ -8,7 +8,7 @@ import './js/smoothieSkrollToAnchors.js';
 import './js/registerUser';
 import './js/open-modal-search.js';
 import './js/open-modal-create-ads';
-import './js/find-product-by-query';
+
 
 // import './js/fetch-categories-modal';
 
