@@ -6,7 +6,7 @@ const BASE_URL = 'https://callboard-backend.herokuapp.com';
 //получает с формы регистрации такой обьект
 
 // const userD = {
-//     email: "user0090@example.com",
+//     email: "user00@example.com",
 //     password: "qwerty123",
 // };
 

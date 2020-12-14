@@ -1,7 +1,5 @@
 const openModalCreateAds = document.querySelector('.create-ad');
-console.log(openModalCreateAds);
 const closeModalCreateAds = document.querySelector('.add-modal-close');
-
 const backdropCreateAds = document.querySelector('.add-modal-backdrop');
 
 openModalCreateAds.addEventListener('click', onOpenModalAuthorization);
