@@ -425,7 +425,16 @@ button {
   padding: 20px;
 
   transform: translateX(10px);
-  // display: none;
+  display: none;
+}
+
+.header-nav-list:focus-within .submenu-nav,
+.header-nav-list:focus-within .icon-submenu-uparrow {
+  display: block;
+}
+
+.header-nav-list:focus-within .icon-submenu-downarrow {
+  display: none;
 }
 
 .submenu-nav-header {
@@ -478,8 +487,9 @@ button {
 }
 
 .icon-submenu-uparrow {
-  transform: translate(190px, 25px);
+  transform: translate(150px, -20px);
   position: absolute;
+  display: none;
 
   @media screen and (min-width: 1260px) {
     display: none;
@@ -487,7 +497,7 @@ button {
 }
 
 .icon-submenu-downarrow {
-  transform: translate(190px, 25px);
+  transform: translate(150px, -20px);
   position: absolute;
 
   @media screen and (min-width: 1260px) {
