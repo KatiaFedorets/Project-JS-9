@@ -28,6 +28,7 @@ function onSubmitRegisterForm(event) {
     registerUser(userData).then(({ data }) => {
         console.log(data);
         onCloseModalAuthorization();
+        localStorage.setItem('token', data.id);
         alert({
             text: "Зареєстровано!",
         });

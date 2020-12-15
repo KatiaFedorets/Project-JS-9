@@ -1,10 +1,19 @@
 const openModalCreateAds = document.querySelector('.create-ad');
 const closeModalCreateAds = document.querySelector('.add-modal-close');
 const backdropCreateAds = document.querySelector('.add-modal-backdrop');
+const token = localStorage.getItem('token');
+
+
 
 openModalCreateAds.addEventListener('click', onOpenModalAuthorization);
 closeModalCreateAds.addEventListener('click', onCloseModalAuthorization);
 backdropCreateAds.addEventListener('click', onBackdropClick);
+
+function onOpenByToken() {
+    if (token) {
+        onOpenModalAuthorization()
+    }
+};
 
 
 function onOpenModalAuthorization() {
