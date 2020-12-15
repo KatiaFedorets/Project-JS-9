@@ -16,5 +16,4 @@ function closeMenu() {
     mobileMenuRef.classList.remove('is-open');
   });
 }
-
 closeMenu();
