@@ -1,5 +1,5 @@
 <div class="add-modal-backdrop is-hidden">
-  <form class="add-modal" action="" method="">
+  <form class="add-modal js-post-advert-form" action="" method="">
     <button class="add-modal-close">
       <svg class="add-modal-close-icon">
         <use href="./images/symbol-defs.svg#icon-close"></use>
@@ -11,7 +11,7 @@
     <div class="add-modal-field">
       <label class="add-modal-label" for="name">Назва товару</label>
       <input
-        class="add-modal-input"
+        class="add-modal-input js-input-title"
         type="text"
         name="name"
         id="name"
@@ -28,7 +28,7 @@
             <span class="add-photo-icon">+</span>
           </label>
           <input
-            class="add-photo-input"
+            class="add-photo-input js-input-file"
             type="file"
             name="photo"
             id="photo1"
@@ -106,7 +106,7 @@
     <div class="add-modal-field">
       <label class="add-modal-label" for="description">Опис товару</label>
       <textarea
-        class="add-modal-input add-modal-textarea"
+        class="add-modal-input add-modal-textarea js-textarea-description"
         name="description"
         id="description"
         rows="5"
@@ -134,7 +134,7 @@
     <div class="add-modal-field">
       <label class="add-modal-label" for="price">Ціна</label>
       <input
-        class="add-modal-input"
+        class="add-modal-input js-input-price"
         type="text"
         name="price"
         id="price"
@@ -145,7 +145,7 @@
     <div class="add-modal-field">
       <label class="add-modal-label" for="telephone">Телефон</label>
       <input
-        class="add-modal-input"
+        class="add-modal-input js-input-phone"
         type="tel"
         name="telephone"
         id="telephone"
@@ -154,7 +154,7 @@
     </div>
 
     <div class="add-modal-button-container">
-      <button class="add-modal-button modal-button" type="submit">Додати</button>
+      <button class="add-modal-button modal-button js-post-advert" type="submit">Додати</button>
     </div>
   </form>
 </div>

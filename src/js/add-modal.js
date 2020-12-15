@@ -2,18 +2,54 @@ import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/Material.css';
 import 'material-design-icons/iconfont/material-icons.css';
 import { defaults, alert } from '@pnotify/core';
+import { postAds } from './serviceApi';
 
 defaults.styling = 'material';
 defaults.icons = 'material';
 
-const addAdvForm = document.querySelector('.add-modal');
+const inputTitle = document.querySelector('.js-input-title');
+const textareaDescription = document.querySelector('.js-textarea-description');
+const categoryOption = document.querySelector('.js-category-option');
+const inputPrice = document.querySelector('.js-input-price');
+const inputPhone = document.querySelector('.js-input-phone');
+const inputFile = document.querySelector('.js-input-file');
+const btnPostAdvert = document.querySelector('.js-post-advert');
+const postAdvertForm = document.querySelector('.js-post-advert-form');
 
-const handleNewAdv = event => {
-  const { target } = event;
+postAdvertForm.addEventListener('submit', onSubmitPostAdvert);
 
-  if (!target.classList.contains('.add-modal-button')) return;
+function onSubmitPostAdvert(event) {
+    event.preventDefault();
+    const title = inputTitle.value;
+    const description = textareaDescription.value;
+    // const category = categoryOption.value;
+    const price = inputPrice.value;
+    const phone = inputPhone.value;
+    const files = inputFile.value;
 
-  console.log(target);
+    const advertData = {
+        "title": title,
+        "description": description,
+        // "category": category,
+        "price": price,
+        "phone": phone,
+        "files": files
+    };
+
+    console.log(advertData);
+
+    // postAds(advertData).then(({ data }) => {
+    //     console.log(data);
+    //     localStorage.setItem('token', data.id);
+    //     alert({
+    //         text: "Оголошення успішно створено",
+    //     });
+    // }).catch(error => {
+    //     alert({
+    //         text: error.response.data.message,
+    //     });
+    // })
 };
 
+// 400 (Bad Request) !!!No token provided
 
