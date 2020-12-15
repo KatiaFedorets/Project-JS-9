@@ -3,38 +3,40 @@ import '@pnotify/core/dist/Material.css';
 import 'material-design-icons/iconfont/material-icons.css';
 import { defaults, alert } from '@pnotify/core';
 import { registerUser } from './serviceApi';
+import { onCloseModalAuthorization } from './open-modal-authorization';
 
 defaults.styling = 'material';
 defaults.icons = 'material';
 
+const inputEmail = document.querySelector('.js-email');
+const inputPassword = document.querySelector('.js-password');
+const btnLogin = document.querySelector('.js-login');
+const btnRegister = document.querySelector('.js-register');
 const registerFormRef = document.querySelector('.register-form');
 
-console.log(registerFormRef);
+registerFormRef.addEventListener('submit', onSubmitRegisterForm);
 
-const OnRegisterSubmit = event => {
+function onSubmitRegisterForm(event) {
     event.preventDefault();
+    const email = inputEmail.value;
+    const password = inputPassword.value;
+    const userData = {
+        "email": email,
+        "password": password
+    };
 
-    const { currentTarget: form } = event;
-    const formData = new FormData(form);
-    console.log(formData.values);
-    const body = {};
-
-    formData.forEach((value, key) => {
-        console.log(value);
-        body[key] = value;
-    });
-
-    registerUser(body)
-        .then(({ data }) => {
-            console.log(data);
-            // localStorage.setItem('token', data.token)
-            // document.location.href = '/';
-        })
-        .catch(error => {
-            alert({
-                text: error.response.data.message,
-            });
+    registerUser(userData).then(({ data }) => {
+        console.log(data);
+        onCloseModalAuthorization();
+        localStorage.setItem('token', data.id);
+        alert({
+            text: "Зареєстровано!",
         });
+    }).catch(error => {
+        alert({
+            text: error.response.data.message,
+        });
+    })
 };
 
-registerFormRef.addEventListener('submit', OnRegisterSubmit);
+

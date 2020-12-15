@@ -28,7 +28,7 @@ function onOpenModalAuthorization() {
 
 }
 
-function onCloseModalAuthorization() {
+export function onCloseModalAuthorization() {
   window.removeEventListener('keydown', onEscKeyPress);
   modalAuthorization.classList.add("is-hidden");
 }

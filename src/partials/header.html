@@ -3,12 +3,10 @@
 <header>
     <div class="container header">
         <nav class="header-nav">
-
-
             <button type="button" class="menu-button" aria-controls="content" data-menu-button>
-
                 <svg width="20" height="20" aria-label="Переключатель мобильного меню" class="icon-header-menu">
-                    <use class="icon-open" href="./images/symbol-defs.svg#icon-menu"></use>
+                    <use class="icon-open" href="./images/symbol-defs.svg#icon-menu">
+                    </use>
                 </svg>
             </button>
 
@@ -17,20 +15,22 @@
             </a>
 
 
-            <button type="button" class="login-button-tablet" aria-controls="login" data-search-button>
+            <button type="button" class="login-button-tablet" aria-controls="login" data-auth-button>
                 РЕЄСТРАЦІЯ/УВІЙТИ
             </button>
 
-            <button class="header-my-cab">
+            <button class="header-my-cab" data-account-button>
                 <svg width="20" height="20" aria-label="Мой кабинет" class="icon-submenu-registration">
-                    <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man"></use>
+                    <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man">
+                    </use>
                 </svg>
                 Мій кабінет
             </button>
 
-            <button type="button" class="menu-button-desktop" aria-controls="content" data-menu-button>
+            <button type="button" class="menu-button-desktop" aria-controls="content" data-logout-button>
                 <svg width="20" height="20" aria-label="Выход с аккаунта" class="icon-account-close">
-                    <use class="icon-arrow" href="./images/icomoon/sprite.svg#icon-header-arrow"></use>
+                    <use class="icon-arrow" href="./images/icomoon/sprite.svg#icon-header-arrow">
+                    </use>
                 </svg>
             </button>
 
@@ -41,12 +41,10 @@
                 <li class="my-cab-menu second"><a href="#best">Обране</a></li>
             </ul>
 
-            </li>
-
-
             <button type="button" class="login-button" aria-controls="login" data-search-button>
                 <svg width="20" height="20" aria-label="Вход в личный кабинет" class="icon-header-login">
-                    <use class="icon-man" href="./images/symbol-defs.svg#icon-user-profile"></use>
+                    <use class="icon-man" href="./images/symbol-defs.svg#icon-user-profile">
+                    </use>
                 </svg>
             </button>
 
@@ -56,66 +54,72 @@
             </button>
 
             <button type="button" class="search-button" aria-controls="search" data-action="open-modal-search">
-
-
                 <svg width="24" height="24" aria-label="Поиск товаров" class="icon-header-search">
-                    <use class="icon-search" href="./images/icomoon/sprite.svg#icon-header-search"></use>
+                    <use class="icon-search" href="./images/icomoon/sprite.svg#icon-header-search">
+                    </use>
                 </svg>
             </button>
 
-            <button type="button" class="button-cleanup" aria-controls="cleanup" data-menu-button>
+            <button type="button" class="button-cleanup" aria-controls="cleanup" data-clear-button>
                 <svg width="24" height="24" aria-label="Очистить фильтры" class="icon-cleanup">
-                    <use class="icon-header-circle" href="./images/icomoon/sprite.svg#icon-header-circle"></use>
+                    <use class="icon-header-circle" href="./images/icomoon/sprite.svg#icon-header-circle">
+                    </use>
                 </svg>
                 <span class="cleanup-span">Очистити фільтри</span>
             </button>
 
-            <!-- Боковое меню -->
+            <!-- Боковое меню -->  
             <div class="content" id="content" data-menu>
-                <button type="button" class="menu-button is-open" aria-controls="content" data-menu-button>
+                <button type="button" class="menu-button is-open" aria-controls="content" data-logout-button>
                     <svg width="20" height="20" aria-label="Переключатель мобильного меню"
                         class="icon-header-menu-tablet">
-                        <use class="icon-arrow" href="./images/icomoon/sprite.svg#icon-header-arrow"></use>
+                        <use class="icon-arrow" href="./images/icomoon/sprite.svg#icon-header-arrow">
+                        </use>
                     </svg>
                 </button>
 
                 <button type="button" class="close-button" aria-controls="content" data-menu-button>
                     <svg width="20" height="20" aria-label="Закрывает меню" class="icon-header-menu-close">
-                        <use class="icon-x" href="./images//symbol-defs.svg#icon-close"></use>
+                        <use class="icon-x" href="./images//symbol-defs.svg#icon-close">
+                        </use>
                     </svg>
                 </button>
-
-                <svg width="20" height="20" aria-label="Закрывает подменю" class="icon-submenu-uparrow">
-                    <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-up-arrow"></use>
-                </svg>
-                <svg width="20" height="20" aria-label="Открывет подменю" class="icon-submenu-downarrow">
-                    <use class="icon-x" href="./images/symbol-defs.svg#icon-arrow-drop-down"></use>
-                </svg>
-
                 <ul class="header-nav-ul">
-                    <li class="header-nav-list desktop my-cab">
+                    <li class="header-nav-list desktop my-cab" data-account-button>
                         <a href="#my-cabinet">
                             <svg width="20" height="20" aria-label="Мой кабинет" class="icon-submenu-registration">
-                                <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man"></use>
+                                <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man">
+                                </use>
                             </svg>
                             Мій кабінет
                         </a>
+                        <svg width="20" height="20" aria-label="Закрывает подменю" class="icon-submenu-uparrow">
+                            <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-up-arrow">
+                            </use>
+                        </svg>
+                        <svg width="20" height="20" aria-label="Открывет подменю" class="icon-submenu-downarrow">
+                            <use class="icon-x" href="./images/symbol-defs.svg#icon-arrow-drop-down">
+                            </use>
+                        </svg>
                         <ul class="submenu-nav">
-                            <li class="my-cab-menu first"><a href="#my-ads">Мої оголошення</a>
+                            <li class="my-cab-menu first">
+                                <a href="#my-ads">Мої оголошення</a>
                             </li>
-                            <li class="my-cab-menu second"><a href="#best">Обране</a></li>
+                            <li class="my-cab-menu second">
+                                <a href="#best">Обране</a>
+                            </li>
                         </ul>
-
                     </li>
-                    <li class="header-nav-list desktop login">
+                    <li class="header-nav-list desktop login" data-auth-button>
                         <a href="#registration">
                             <svg width="20" height="20" aria-label="Регистрация" class="icon-submenu-registration">
-                                <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man"></use>
+                                <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man">
+                                </use>
                             </svg>
                             Реєстрація / Увійти
                         </a>
                     </li>
-                    <li class="header-nav-list">
+                    <li class="header-nav-list" >
                         <a href="#property">Нерухомість</a>
                     </li>
                     <li class="header-nav-list">
