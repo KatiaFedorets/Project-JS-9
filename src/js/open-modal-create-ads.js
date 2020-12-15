@@ -8,6 +8,15 @@ const token = localStorage.getItem('token');
 openModalCreateAds.addEventListener('click', onOpenModalAuthorization);
 closeModalCreateAds.addEventListener('click', onCloseModalAuthorization);
 backdropCreateAds.addEventListener('click', onBackdropClick);
+const token = localStorage.getItem('token');
+
+
+
+function onOpenByToken() {
+    if (token) {
+        onOpenModalAuthorization()
+    }
+};
 
 function onOpenByToken() {
     if (token) {

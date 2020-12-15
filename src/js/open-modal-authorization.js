@@ -22,7 +22,7 @@ backdrop.addEventListener('click', onBackdropClick);
 //   }
 
 
-function onOpenModalAuthorization() {
+expotr function onOpenModalAuthorization() {
   window.addEventListener('keydown', onEscKeyPress);
   modalAuthorization.classList.toggle("is-hidden");
 

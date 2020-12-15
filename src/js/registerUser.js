@@ -31,7 +31,7 @@ function onSubmitRegisterForm(event) {
         localStorage.setItem('token', data.id);
         alert({
             text: "Зареєстровано!",
-        });
+        })
     }).catch(error => {
         alert({
             text: error.response.data.message,
