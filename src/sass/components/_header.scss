@@ -74,15 +74,6 @@ button {
   }
 
   margin-left: 60px;
-  // display: block;
-  // z-index: 2;
-
-  // transform: translate(-397px, 151px);
-}
-
-.login-button.is-open {
-  // display: block;
-  // z-index: 2;
 }
 
 .login-button-tablet {
@@ -136,12 +127,6 @@ button {
   }
 }
 
-// .search-button-tablet {
-//   @media screen and (max-width: 767px) {
-//     display: none;
-//   }
-// }
-
 .menu-button {
   padding: 25px;
   border-right: 1px solid $background-color;
@@ -151,9 +136,7 @@ button {
   }
 
   @media screen and (min-width: 1260px) {
-    // display: none;
     visibility: hidden;
-    // transform: scale(0);
   }
 }
 
@@ -267,10 +250,7 @@ button {
     top: 0;
     right: 100%;
 
-    // background-color: $alternative-tittle-color;
-
     height: 100%;
-    // width: 100%;
 
     padding-top: 70px;
 
@@ -296,10 +276,6 @@ button {
     }
   }
 }
-
-// .hidden {
-//   overflow: hidden;
-// }
 
 .menu-button.is-open {
   position: absolute;
@@ -359,8 +335,6 @@ button {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.14;
-  // display: flex;
-  // align-items: center;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: $primary-color;
@@ -457,12 +431,6 @@ button {
   display: block;
 }
 
-// .submenu-login {
-//   padding: 20px;
-//   position: absolute;
-//   transform: translate(-60px, 15px);
-// }
-
 .my-cab-menu {
   font-family: $font-primary;
   font-style: normal;
@@ -477,11 +445,6 @@ button {
 
 .my-cab-menu:not(:last-child) {
   margin-bottom: 20px;
-}
-
-.my-cab-menu.first {
-}
-.my-cab-menu.second {
 }
 
 .icon-submenu-uparrow {
