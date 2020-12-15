@@ -79,8 +79,13 @@ button {
   @media screen and (min-width: $desktop) {
     display: none;
   }
-
+  cursor: pointer;
   margin-left: 60px;
+
+  &:hover .icon-man,
+  &:focus .icon-man {
+    fill: $orange;
+  }
 
   &-tablet {
     min-width: 130px;
@@ -159,6 +164,12 @@ button {
   }
 }
 
+.icon-search {
+  fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
+}
+
 .search-button:hover .icon-search,
 .search-button:focus .icon-search {
   fill: $orange;
@@ -167,6 +178,7 @@ button {
 .menu-button {
   padding: 25px;
   border-right: 1px solid $background-color;
+  cursor: pointer;
 
   @media screen and (min-width: $tablet) {
     transform: translateY(100%);
@@ -187,9 +199,16 @@ button {
   }
 
   &-desktop {
+    cursor: pointer;
     @media screen and (max-width: 1279px) {
       display: none;
     }
+
+    &:hover .icon-arrow,
+    &:focus .icon-arrow {
+      fill: $orange;
+    }
+
     &.is-logout {
       display: none;
     }
@@ -197,6 +216,12 @@ button {
       display: block;
     }
   }
+}
+
+.icon-open {
+  fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
 }
 
 .menu-button:hover .icon-open,
@@ -251,13 +276,19 @@ button {
   letter-spacing: 0.03em;
 
   color: $primary-color;
+
+  transition: color 250ms ease-in-out;
 }
 
 .icon-header-circle {
   fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
 }
 .icon-man {
   fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
 }
 
 .menu-button .icon-close {
@@ -308,6 +339,12 @@ button {
   }
 }
 
+.icon-x {
+  fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
+}
+
 .close-button:hover .icon-x,
 .close-button:focus .icon-x {
   fill: $orange;
@@ -350,19 +387,29 @@ button {
   }
 }
 
+.icon-arrow {
+  fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
+}
+
 .menu-button.is-open {
   position: absolute;
   right: 0px;
   top: 75px;
   transition: color 250ms linear;
   border: none;
-  // display: none;
 
   @media screen and (min-width: $tablet) {
     top: 0;
   }
   @media screen and (min-width: $desktop) {
     transform: translate(51px, -29px);
+  }
+
+  &:hover .icon-arrow,
+  &:focus .icon-arrow {
+    fill: $orange;
   }
 
   &.is-logout {
@@ -564,6 +611,7 @@ button {
 }
 
 .header-my-cab {
+  cursor: pointer;
   width: auto;
   padding: 25px;
   border-right: 1px solid $background-color;
@@ -579,8 +627,17 @@ button {
 
   margin-left: 221px;
 
+  color: $primary-color;
+
+  transition: color 250ms ease-in-out;
+
   @media screen and (max-width: 1279px) {
     display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $orange;
   }
 
   &.is-logout {
@@ -589,4 +646,8 @@ button {
   &.is-auth {
     display: block;
   }
+}
+
+.block {
+  display: block;
 }
