@@ -158,12 +158,12 @@ button {
 }
 
 .button-cleanup {
-  height: 70px;
+  height: 64px;
   display: none;
 
   @media screen and (min-width: $tablet) {
     display: block;
-    transform: translate(550px, 89%);
+    transform: translate(550px, 100%);
     min-width: 157px;
     position: absolute;
   }
