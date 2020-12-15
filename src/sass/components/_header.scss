@@ -154,6 +154,7 @@ button {
   @media screen and (max-width: 1259px) {
     display: none;
   }
+  display: none;
 }
 
 .button-cleanup {
@@ -283,19 +284,23 @@ button {
   top: 75px;
   transition: color 250ms linear;
   border: none;
+  display: none;
 
   @media screen and (min-width: $tablet) {
     top: 0;
   }
+  @media screen and (min-width: 1260px) {
+    transform: translate(51px, -29px);
+  }
 }
 
-.menu-button.is-open .icon-close {
-  display: block;
-}
+// .menu-button.is-open .icon-close {
+//   display: block;
+// }
 
-.menu-button.is-open .icon-open {
-  display: none;
-}
+// .menu-button.is-open .icon-open {
+//   display: none;
+// }
 
 // List  BACKDROP MENU
 
@@ -353,6 +358,8 @@ button {
   letter-spacing: 0.02em;
 
   color: $primary-color;
+
+  display: none;
 }
 
 .header-nav-list {
@@ -485,6 +492,8 @@ button {
   text-transform: uppercase;
 
   margin-left: 221px;
+
+  display: none;
 
   @media screen and (max-width: 1259px) {
     display: none;
