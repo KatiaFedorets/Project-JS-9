@@ -12,14 +12,14 @@ button {
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: $tablet) and (max-width: 1259px) {
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
     max-width: $tablet;
     padding-left: 22px;
     padding-right: 22px;
   }
 
-  @media screen and (min-width: 1260px) {
-    max-width: 1260px;
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -69,7 +69,7 @@ button {
     display: none;
   }
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
   }
 
@@ -79,7 +79,7 @@ button {
 .login-button-tablet {
   min-width: 130px;
   cursor: pointer;
-  @media screen and (max-width: 1259px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
   margin-right: 20px;
@@ -135,7 +135,7 @@ button {
     transform: translateY(100%);
   }
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     visibility: hidden;
   }
 }
@@ -145,13 +145,13 @@ button {
 
   border-right: 1px solid $background-color;
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
   }
 }
 
 .menu-button-desktop {
-  @media screen and (max-width: 1259px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
   display: none;
@@ -167,7 +167,7 @@ button {
     min-width: 157px;
     position: absolute;
   }
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     transform: translate(1055px, 60px);
   }
 }
@@ -207,7 +207,7 @@ button {
     color: inherit;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: 1259px) {
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
     margin-bottom: 20px;
   }
 }
@@ -222,7 +222,7 @@ button {
     right: 39px;
   }
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     right: 15px;
   }
 }
@@ -236,7 +236,7 @@ button {
     border-right: 1px solid $background-color;
   }
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
   }
 }
@@ -245,7 +245,7 @@ button {
 
 .content {
   position: absolute;
-  @media screen and (max-width: 1259px) {
+  @media screen and (max-width: 1279px) {
     display: none;
 
     top: 0;
@@ -270,7 +270,7 @@ button {
     top: 0;
     min-width: 338px;
 
-    @media screen and (min-width: 1260px) {
+    @media screen and (min-width: $desktop) {
       background-color: transparent;
       left: auto;
       top: auto;
@@ -289,7 +289,7 @@ button {
   @media screen and (min-width: $tablet) {
     top: 0;
   }
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     transform: translate(51px, -29px);
   }
 }
@@ -317,7 +317,7 @@ button {
   border-top: 1px solid $background-color;
   border-right: 1px solid $background-color;
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
     flex-direction: row;
     transform: translate(30px, 65px);
@@ -343,7 +343,7 @@ button {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: $primary-color;
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
   }
 }
@@ -363,7 +363,7 @@ button {
 }
 
 .header-nav-list {
-  @media screen and (max-width: 1259px) {
+  @media screen and (max-width: 1279px) {
     font-family: $font-primary;
     font-style: normal;
     font-weight: bold;
@@ -379,7 +379,7 @@ button {
     padding-left: 34px;
   }
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     font-family: $font-primary;
     font-style: normal;
     font-weight: bold;
@@ -393,7 +393,7 @@ button {
 }
 
 .header-nav-list:not(:last-child) {
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     margin-right: 36px;
   }
 }
@@ -429,7 +429,7 @@ button {
   z-index: 3;
   display: none;
 
-  @media screen and (max-width: 1259px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
 }
@@ -459,7 +459,7 @@ button {
   position: absolute;
   display: none;
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
   }
 }
@@ -468,7 +468,7 @@ button {
   transform: translate(150px, -20px);
   position: absolute;
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
   }
 }
@@ -495,7 +495,7 @@ button {
 
   display: none;
 
-  @media screen and (max-width: 1259px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
 }
