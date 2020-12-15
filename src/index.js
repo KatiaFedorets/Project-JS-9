@@ -1,6 +1,7 @@
 import './sass/main.scss';
 import './js/open-modal-authorization';
 import './js/serviceApi';
+import './js/header/buttonsRegisterAccountToggle.js';
 import './js/header/openMenuHeader.js';
 import './js/header/hiddenNavSubmenu.js';
 // import './js/smoothieSkrollToAnchors.js';

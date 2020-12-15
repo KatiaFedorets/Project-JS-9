@@ -81,27 +81,35 @@ button {
   }
 
   margin-left: 60px;
-}
 
-.login-button-tablet {
-  min-width: 130px;
-  cursor: pointer;
-  @media screen and (max-width: 1279px) {
-    display: none;
+  &-tablet {
+    min-width: 130px;
+    cursor: pointer;
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+    margin-right: 20px;
+    margin-left: 230px;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: $primary-color;
+    transition: color 250ms ease-in-out;
+
+    &.is-logout {
+      display: none;
+    }
+
+    &.is-auth {
+      display: block;
+    }
   }
-  margin-right: 20px;
-  margin-left: 230px;
-  font-family: $font-primary;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.17;
-
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-
-  color: $primary-color;
-  transition: color 250ms ease-in-out;
 }
 
 .login-button-tablet:hover,
@@ -167,28 +175,33 @@ button {
   @media screen and (min-width: $desktop) {
     visibility: hidden;
   }
+
+  &-tablet {
+    padding: 25px;
+
+    border-right: 1px solid $background-color;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &-desktop {
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+    &.is-logout {
+      display: none;
+    }
+    &.is-auth {
+      display: block;
+    }
+  }
 }
 
 .menu-button:hover .icon-open,
 .menu-button:focus .icon-open {
   fill: $orange;
-}
-
-.menu-button-tablet {
-  padding: 25px;
-
-  border-right: 1px solid $background-color;
-
-  @media screen and (min-width: $desktop) {
-    display: none;
-  }
-}
-
-.menu-button-desktop {
-  @media screen and (max-width: 1279px) {
-    display: none;
-  }
-  display: none;
 }
 
 .button-cleanup {
@@ -343,7 +356,7 @@ button {
   top: 75px;
   transition: color 250ms linear;
   border: none;
-  display: none;
+  // display: none;
 
   @media screen and (min-width: $tablet) {
     top: 0;
@@ -351,15 +364,15 @@ button {
   @media screen and (min-width: $desktop) {
     transform: translate(51px, -29px);
   }
+
+  &.is-logout {
+    display: none;
+  }
+
+  &.is-auth {
+    display: block;
+  }
 }
-
-// .menu-button.is-open .icon-close {
-//   display: block;
-// }
-
-// .menu-button.is-open .icon-open {
-//   display: none;
-// }
 
 // List  BACKDROP MENU
 
@@ -402,34 +415,6 @@ button {
   border-bottom: 1px solid $background-color;
 }
 
-.header-nav-list.desktop {
-  font-family: $font-primary;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: $primary-color;
-  @media screen and (min-width: $desktop) {
-    display: none;
-  }
-}
-
-.header-nav-list.desktop.my-cab {
-  font-family: $font-primary;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-
-  letter-spacing: 0.02em;
-
-  color: $primary-color;
-
-  display: none;
-}
-
 .header-nav-list {
   @media screen and (max-width: 1279px) {
     font-family: $font-primary;
@@ -458,6 +443,39 @@ button {
 
     color: $primary-color;
   }
+
+  &.desktop {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $primary-color;
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+
+    &.my-cab {
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 1.14;
+
+      letter-spacing: 0.02em;
+
+      color: $primary-color;
+
+      &.is-logout {
+        display: none;
+      }
+      &.is-auth {
+        display: block;
+      }
+    }
+  }
 }
 
 .header-nav-list:not(:last-child) {
@@ -473,6 +491,28 @@ button {
 
   transform: translateX(10px);
   display: none;
+
+  &-header {
+    position: absolute;
+    padding: 20px;
+    min-width: 206px;
+
+    background: $grey;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
+
+    transform: translate(827px, 84px);
+
+    z-index: 3;
+    display: none;
+
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+
+    &.focus {
+      display: block;
+    }
+  }
 }
 
 .header-nav-list:focus-within .submenu-nav,
@@ -482,28 +522,6 @@ button {
 
 .header-nav-list:focus-within .icon-submenu-downarrow {
   display: none;
-}
-
-.submenu-nav-header {
-  position: absolute;
-  padding: 20px;
-  min-width: 206px;
-
-  background: $grey;
-  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
-
-  transform: translate(827px, 84px);
-
-  z-index: 3;
-  display: none;
-
-  @media screen and (max-width: 1279px) {
-    display: none;
-  }
-}
-
-.submenu-nav-header.focus {
-  display: block;
 }
 
 .my-cab-menu {
@@ -561,9 +579,14 @@ button {
 
   margin-left: 221px;
 
-  display: none;
-
   @media screen and (max-width: 1279px) {
     display: none;
+  }
+
+  &.is-logout {
+    display: none;
+  }
+  &.is-auth {
+    display: block;
   }
 }

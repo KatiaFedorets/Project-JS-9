@@ -15,11 +15,11 @@
             </a>
 
 
-            <button type="button" class="login-button-tablet" aria-controls="login" data-search-button>
+            <button type="button" class="login-button-tablet" aria-controls="login" data-auth-button>
                 РЕЄСТРАЦІЯ/УВІЙТИ
             </button>
 
-            <button class="header-my-cab">
+            <button class="header-my-cab" data-account-button>
                 <svg width="20" height="20" aria-label="Мой кабинет" class="icon-submenu-registration">
                     <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man">
                     </use>
@@ -27,7 +27,7 @@
                 Мій кабінет
             </button>
 
-            <button type="button" class="menu-button-desktop" aria-controls="content" data-menu-button>
+            <button type="button" class="menu-button-desktop" aria-controls="content" data-logout-button>
                 <svg width="20" height="20" aria-label="Выход с аккаунта" class="icon-account-close">
                     <use class="icon-arrow" href="./images/icomoon/sprite.svg#icon-header-arrow">
                     </use>
@@ -70,7 +70,7 @@
 
             <!-- Боковое меню -->  
             <div class="content" id="content" data-menu>
-                <button type="button" class="menu-button is-open" aria-controls="content" data-menu-button>
+                <button type="button" class="menu-button is-open" aria-controls="content" data-logout-button>
                     <svg width="20" height="20" aria-label="Переключатель мобильного меню"
                         class="icon-header-menu-tablet">
                         <use class="icon-arrow" href="./images/icomoon/sprite.svg#icon-header-arrow">
@@ -85,7 +85,7 @@
                     </svg>
                 </button>
                 <ul class="header-nav-ul">
-                    <li class="header-nav-list desktop my-cab">
+                    <li class="header-nav-list desktop my-cab" data-account-button>
                         <a href="#my-cabinet">
                             <svg width="20" height="20" aria-label="Мой кабинет" class="icon-submenu-registration">
                                 <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man">
@@ -110,7 +110,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="header-nav-list desktop login">
+                    <li class="header-nav-list desktop login" data-auth-button>
                         <a href="#registration">
                             <svg width="20" height="20" aria-label="Регистрация" class="icon-submenu-registration">
                                 <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man">
@@ -119,7 +119,7 @@
                             Реєстрація / Увійти
                         </a>
                     </li>
-                    <li class="header-nav-list">
+                    <li class="header-nav-list" >
                         <a href="#property">Нерухомість</a>
                     </li>
                     <li class="header-nav-list">
