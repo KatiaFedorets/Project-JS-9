@@ -55,11 +55,18 @@ button {
   margin-right: auto;
   padding: 25px;
 
+  transition: color 250ms ease-in-out;
+
   color: $primary-color;
   @media screen and (min-width: $tablet) {
     margin-left: auto;
     margin-right: 0;
   }
+}
+
+.logo-header:hover,
+.logo-header:focus {
+  color: $orange;
 }
 
 // Logo
@@ -94,6 +101,12 @@ button {
   text-transform: uppercase;
 
   color: $primary-color;
+  transition: color 250ms ease-in-out;
+}
+
+.login-button-tablet:hover,
+.login-button-tablet:focus {
+  color: $orange;
 }
 
 .create-ad {
@@ -111,13 +124,24 @@ button {
 
   min-width: 188px;
   cursor: pointer;
+
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+
   @media screen and (max-width: 767px) {
     display: none;
   }
 }
 
+.create-ad:hover,
+.create-ad:focus {
+  color: $primary-color;
+  background-color: #35f045;
+}
+
 .search-button {
   cursor: pointer;
+  // fill: $primary-color;
+  transition: fill 250ms ease-in-out;
 
   @media screen and (max-width: 767px) {
     display: block;
@@ -125,6 +149,11 @@ button {
   @media screen and (min-width: $tablet) {
     position: absolute;
   }
+}
+
+.search-button:hover .icon-search,
+.search-button:focus .icon-search {
+  fill: $orange;
 }
 
 .menu-button {
@@ -138,6 +167,11 @@ button {
   @media screen and (min-width: $desktop) {
     visibility: hidden;
   }
+}
+
+.menu-button:hover .icon-open,
+.menu-button:focus .icon-open {
+  fill: $orange;
 }
 
 .menu-button-tablet {
@@ -161,6 +195,10 @@ button {
   height: 64px;
   display: none;
 
+  transition: color 250ms ease-in-out;
+
+  cursor: pointer;
+
   @media screen and (min-width: $tablet) {
     display: block;
     transform: translate(550px, 100%);
@@ -173,6 +211,16 @@ button {
     padding: 10px;
     min-width: 177px;
   }
+}
+
+.button-cleanup:hover .cleanup-span,
+.button-cleanup:focus-within .cleanup-span {
+  color: $orange;
+}
+
+.button-cleanup:hover .icon-header-circle,
+.button-cleanup:focus-within .icon-header-circle {
+  fill: $orange;
 }
 
 .icon-cleanup {
@@ -234,6 +282,9 @@ button {
   position: absolute;
   right: 0;
   top: 0;
+  color: $primary-color;
+
+  transition: fill 250ms ease-in-out;
 
   @media screen and (min-width: $tablet) {
     border-right: 1px solid $background-color;
@@ -242,6 +293,11 @@ button {
   @media screen and (min-width: $desktop) {
     display: none;
   }
+}
+
+.close-button:hover .icon-x,
+.close-button:focus .icon-x {
+  fill: $orange;
 }
 
 // Backdrop MENU
@@ -327,6 +383,15 @@ button {
 
     border: none;
   }
+}
+.header-nav-ul a {
+  color: $primary-color;
+  transition: color 250ms ease-in-out;
+}
+
+.header-nav-ul a:hover,
+.header-nav-ul a:focus {
+  color: $orange;
 }
 
 .header-tablet-nav {
