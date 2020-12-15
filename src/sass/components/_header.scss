@@ -168,7 +168,10 @@ button {
     position: absolute;
   }
   @media screen and (min-width: $desktop) {
-    transform: translate(1055px, 60px);
+    transform: translate(1054px, 61px);
+    height: 52px;
+    padding: 10px;
+    min-width: 177px;
   }
 }
 
