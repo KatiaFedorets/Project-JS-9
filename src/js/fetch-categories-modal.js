@@ -12,6 +12,7 @@ function fetchCategoriesOptions() {
 function renderCategoriesOptions(categories) {
   const markupList = categoriesOptionTpl(categories);
   optionsSelect.innerHTML = markupList;
+  // console.log(markupList);
 }
 
 fetchCategoriesOptions();

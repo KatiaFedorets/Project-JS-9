@@ -9,7 +9,8 @@ defaults.icons = 'material';
 
 const inputTitle = document.querySelector('.js-input-title');
 const textareaDescription = document.querySelector('.js-textarea-description');
-const categoryOption = document.querySelector('.js-category-option');
+// const categoryOption = document.querySelector('.js-category-option');
+const selectCategory = document.querySelector('.js-options-select');
 const inputPrice = document.querySelector('.js-input-price');
 const inputPhone = document.querySelector('.js-input-phone');
 const inputFile = document.querySelector('.js-input-file');
@@ -22,7 +23,8 @@ function onSubmitPostAdvert(event) {
     event.preventDefault();
     const title = inputTitle.value;
     const description = textareaDescription.value;
-    // const category = categoryOption.value;
+    // const category = selectCategory.option;
+    const category = selectCategory.options[1].value;
     const price = inputPrice.value;
     const phone = inputPhone.value;
     const files = inputFile.value;
@@ -30,7 +32,7 @@ function onSubmitPostAdvert(event) {
     const advertData = {
         "title": title,
         "description": description,
-        // "category": category,
+        "category": category,
         "price": price,
         "phone": phone,
         "files": files
@@ -38,6 +40,9 @@ function onSubmitPostAdvert(event) {
 
     console.log(advertData);
 
+    // если это раскоментить, то: 
+    // 400 (Bad Request) !!!No token provided
+    
     // postAds(advertData).then(({ data }) => {
     //     console.log(data);
     //     localStorage.setItem('token', data.id);
@@ -51,5 +56,4 @@ function onSubmitPostAdvert(event) {
     // })
 };
 
-// 400 (Bad Request) !!!No token provided
 

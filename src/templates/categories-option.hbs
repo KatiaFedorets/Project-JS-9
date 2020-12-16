@@ -1,3 +1,5 @@
-{{#each this.categories}}
-<option value="category" class="js-category-option">{{category}}</option>
-{{/each}}
+<select class="add-modal-input js-options-select" id="category" name="category">
+  {{#each this}}
+  <option value="{{this}}" class="js-category-option">{{this}}</option>
+  {{/each}}
+</select>
