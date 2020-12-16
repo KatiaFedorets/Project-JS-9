@@ -10,5 +10,6 @@ import './js/registerUser';
 import './js/open-modal-search.js';
 import './js/open-modal-create-ads';
 
+import './js/add-modal';
+import './js/fetch-categories-modal';
 
-// import './js/fetch-categories-modal';
