@@ -377,9 +377,9 @@ button {
   fill: $primary-color;
 
   transition: fill 250ms ease-in-out;
-  @media screen and (min-width: $desktop) {
-    display: none;
-  }
+  // @media screen and (min-width: $desktop) {
+  //   display: none;
+  // }
 }
 
 .close-button:hover .icon-x,
