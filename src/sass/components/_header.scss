@@ -180,8 +180,46 @@ button {
     transform: translateY(100%);
   }
 
+  &-tablet {
+    padding: 25px;
+
+    border-right: 1px solid $background-color;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &-desktop {
+    cursor: pointer;
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+
+    &:hover .icon-arrow,
+    &:focus .icon-arrow {
+      fill: $orange;
+    }
+
+    &.is-logout {
+      display: none;
+    }
+    &.is-auth {
+      display: block;
+    }
+  }
+}
+.menu-buttons {
+  padding: 25px;
+  border-right: 1px solid $background-color;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet) {
+    transform: translateY(100%);
+  }
+
   @media screen and (min-width: $desktop) {
-    visibility: hidden;
+    display: none;
   }
 
   &-tablet {
@@ -406,7 +444,8 @@ button {
     top: 0;
   }
   @media screen and (min-width: $desktop) {
-    transform: translate(51px, -29px);
+    transform: translate(70px, -29px);
+    border-left: 1px solid $background-color;
   }
 
   &:hover .icon-arrow,
@@ -506,7 +545,7 @@ button {
     width: 224px;
     color: $primary-color;
     @media screen and (min-width: $desktop) {
-      display: none;
+      display: block;
     }
 
     &.login {
@@ -515,17 +554,16 @@ button {
       @media screen and (min-width: $desktop) {
         position: absolute;
 
-        transform: translate(729px, -93px);
-        border-right: 1px solid $background-color;
+        transform: translate(800px, -93px);
       }
 
-      // &.is-logout {
-      //   display: none;
-      // }
+      &.is-logout {
+        display: none;
+      }
 
-      // &.is-auth {
-      //   display: block;
-      // }
+      &.is-auth {
+        display: block;
+      }
     }
 
     &.my-cab {
@@ -541,9 +579,18 @@ button {
 
       @media screen and (min-width: $desktop) {
         position: absolute;
-        // display: block;
-        display: none;
-        transform: translate(749px, -69px);
+        transform: translate(720px, -90px);
+        // padding: 20px;
+        margin-right: 0;
+        // width: 125px;
+      }
+
+      & a {
+        @media screen and (min-width: $desktop) {
+          padding-top: 20px;
+          padding-left: 20px;
+          padding-bottom: 20px;
+        }
       }
 
       &.is-logout {
@@ -555,6 +602,10 @@ button {
     }
   }
 }
+
+// .header-nav-list.desktop.login.is-hidden {
+//   display: none;
+// }
 
 .header-nav-list:not(:last-child) {
   @media screen and (min-width: $desktop) {
@@ -582,37 +633,14 @@ button {
 
   @media screen and (min-width: $desktop) {
     width: auto;
-    padding: 20px;
-    transform: translate(-20px, 24px);
-    padding: 20px;
+    padding: 0;
+    transform: translate(-2px, 4px);
     min-width: 206px;
     background: #f5f6fb;
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
     z-index: 3;
     text-align: left;
   }
-
-  // &-header {
-  //   position: absolute;
-  //   padding: 20px;
-  //   min-width: 206px;
-
-  //   background: $grey;
-  //   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
-
-  //   transform: translate(827px, 84px);
-
-  //   z-index: 3;
-  //   display: none;
-
-  //   @media screen and (max-width: 1279px) {
-  //     display: none;
-  //   }
-
-  //   &.focus {
-  //     display: block;
-  //   }
-  // }
 }
 
 .header-nav-list:focus-within .submenu-nav,
@@ -638,6 +666,9 @@ button {
 
 .my-cab-menu:not(:last-child) {
   margin-bottom: 20px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .icon-submenu-uparrow {
