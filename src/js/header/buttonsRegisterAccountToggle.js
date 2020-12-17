@@ -41,6 +41,10 @@ export function checkAuth() {
   const registerBtn = document.querySelector('[data-auth-button]');
   const logOutBtn = document.querySelector('.menu-button.is-open');
 
+  logOutBtn.addEventListener('click', () => {
+    localStorage.clear();
+  });
+
   //Смена кнопок авторизации и Мой кабинет
   const token = localStorage.getItem('token');
   if (token === null) {
