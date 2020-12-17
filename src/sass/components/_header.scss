@@ -377,9 +377,6 @@ button {
   fill: $primary-color;
 
   transition: fill 250ms ease-in-out;
-}
-
-.header-nav-list .icon-x {
   @media screen and (min-width: $desktop) {
     display: none;
   }
