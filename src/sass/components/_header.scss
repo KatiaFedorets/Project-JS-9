@@ -58,9 +58,13 @@ button {
   transition: color 250ms ease-in-out;
 
   color: $primary-color;
+
   @media screen and (min-width: $tablet) {
-    margin-left: auto;
-    // margin-right: 0;
+    margin-right: 0;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: auto;
+    margin-left: 500px;
   }
 }
 
