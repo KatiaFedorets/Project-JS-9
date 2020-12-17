@@ -540,9 +540,9 @@ button {
       color: $primary-color;
 
       @media screen and (min-width: $desktop) {
-        // position: absolute;
-        // display: block;
-        // transform: translate(752px, -66px);
+        position: absolute;
+        display: block;
+        transform: translate(749px, -69px);
       }
 
       &.is-logout {
@@ -564,32 +564,54 @@ button {
 // Submenu
 
 .submenu-nav {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: #000000;
+
+  width: 170px;
   padding: 20px;
 
   transform: translateX(10px);
   display: none;
 
-  &-header {
-    position: absolute;
+  @media screen and (min-width: $desktop) {
+    width: auto;
+    padding: 20px;
+    transform: translate(-20px, 24px);
     padding: 20px;
     min-width: 206px;
-
-    background: $grey;
+    background: #f5f6fb;
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
-
-    transform: translate(827px, 84px);
-
     z-index: 3;
-    display: none;
-
-    @media screen and (max-width: 1279px) {
-      display: none;
-    }
-
-    &.focus {
-      display: block;
-    }
+    text-align: left;
   }
+
+  // &-header {
+  //   position: absolute;
+  //   padding: 20px;
+  //   min-width: 206px;
+
+  //   background: $grey;
+  //   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
+
+  //   transform: translate(827px, 84px);
+
+  //   z-index: 3;
+  //   display: none;
+
+  //   @media screen and (max-width: 1279px) {
+  //     display: none;
+  //   }
+
+  //   &.focus {
+  //     display: block;
+  //   }
+  // }
 }
 
 .header-nav-list:focus-within .submenu-nav,
