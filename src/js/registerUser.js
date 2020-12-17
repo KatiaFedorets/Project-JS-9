@@ -14,7 +14,6 @@ const btnLogin = document.querySelector('.js-login');
 const btnRegister = document.querySelector('.js-register');
 const registerFormRef = document.querySelector('.register-form');
 
-
 const token = localStorage.getItem('token');
 console.log(token);
 
@@ -22,46 +21,39 @@ registerFormRef.addEventListener('submit', onSubmitRegisterForm);
 // btnRegister.addEventListener('submit', onRegisterClickBtn);
 // btnLogin.addEventListener('submit', onLoginClickBtn);
 
-
 let userData = {
-    "email": '',
-    "password": ''
+  email: '',
+  password: '',
 };
 
 // const email = inputEmail.value;
 // const password = inputPassword.value;
 
 function onSubmitRegisterForm(event) {
-    event.preventDefault();
-    const email = inputEmail.value;
-    const password = inputPassword.value;
-    userData = {
-        "email": email,
-        "password": password
-    };
+  event.preventDefault();
+  const email = inputEmail.value;
+  const password = inputPassword.value;
+  userData = {
+    email: email,
+    password: password,
+  };
 
-    registerUser(userData).then(({ data }) => {
-        console.log(data);
-        localStorage.setItem('token', data.id);
-        alert({
-            text: "Зареєстровано нового користувача!",
-        });
-        registerFormRef.reset();
-        onCloseModalAuthorization();
-
-    }).catch(error => {
-        alert({
-            text: error.response.data.message,
-        });
+  registerUser(userData)
+    .then(({ data }) => {
+      console.log(data);
+      localStorage.setItem('token', data.id);
+      alert({
+        text: 'Зареєстровано нового користувача!',
+      });
+      registerFormRef.reset();
+      onCloseModalAuthorization();
     })
-
-
-
-};
-
-
-
-
+    .catch(error => {
+      alert({
+        text: error.response.data.message,
+      });
+    });
+}
 
 // function onRegisterClickBtn(event) {
 //     registerUser(userData).then(({ data }) => {
@@ -95,6 +87,4 @@ function onSubmitRegisterForm(event) {
 //         })
 //     }
 
-
 // };
-

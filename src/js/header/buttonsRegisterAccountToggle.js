@@ -35,7 +35,7 @@ export function showRegisterBtn() {
 
 //Проверка наличия токена и отображение Регистрации или Мой кабинет
 export function checkAuth() {
-  const token = sessionStorage.getItem('accessToken');
+  const token = localStorage.getItem('accessToken');
   if (token === null) {
     console.log(token);
     showRegisterBtn();
