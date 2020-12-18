@@ -20,7 +20,6 @@ export function checkAuth() {
     myAccountBtn.classList.remove('is-logout');
     logOutBtn.classList.remove('is-logout');
     registerBtn.classList.add('is-logout');
-    // location.reload();
   }
 }
 

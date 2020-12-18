@@ -47,6 +47,9 @@ function onSubmitRegisterForm(event) {
       });
       registerFormRef.reset();
       onCloseModalAuthorization();
+      setTimeout(() => {
+        location.reload();
+      }, 1500);
     })
     .catch(error => {
       alert({
