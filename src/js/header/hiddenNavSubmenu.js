@@ -1,5 +1,5 @@
 function openSubmenuByFocus() {
-  const myCab = document.querySelector('.header-my-cab');
+  const myCab = document.querySelector('.header-nav-ul');
   const submenu = document.querySelector('.submenu-nav-header');
 
   myCab.addEventListener('focus', () => {
@@ -12,7 +12,7 @@ function openSubmenuByFocus() {
 openSubmenuByFocus();
 
 function openSubmenuByClick() {
-  const myCab = document.querySelector('.header-my-cab');
+  const myCab = document.querySelector('.header-nav-ul');
   const submenu = document.querySelector('.submenu-nav-header');
 
   myCab.addEventListener('click', () => {

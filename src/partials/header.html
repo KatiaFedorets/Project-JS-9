@@ -3,7 +3,7 @@
 <header>
     <div class="container header">
         <nav class="header-nav">
-            <button type="button" class="menu-button" aria-controls="content" data-menu-button>
+            <button type="button" class="menu-buttons" aria-controls="content" data-menu-button>
                 <svg width="20" height="20" aria-label="Переключатель мобильного меню" class="icon-header-menu">
                     <use class="icon-open" href="./images/symbol-defs.svg#icon-menu">
                     </use>
@@ -13,33 +13,6 @@
             <a href="./index.html" class="logo-header">
                 LOGO
             </a>
-
-
-            <button type="button" class="login-button-tablet" aria-controls="login" data-auth-button>
-                РЕЄСТРАЦІЯ/УВІЙТИ
-            </button>
-
-            <button class="header-my-cab" data-account-button>
-                <svg width="20" height="20" aria-label="Мой кабинет" class="icon-submenu-registration">
-                    <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man">
-                    </use>
-                </svg>
-                Мій кабінет
-            </button>
-
-            <button type="button" class="menu-button-desktop" aria-controls="content" data-logout-button>
-                <svg width="20" height="20" aria-label="Выход с аккаунта" class="icon-account-close">
-                    <use class="icon-arrow" href="./images/icomoon/sprite.svg#icon-header-arrow">
-                    </use>
-                </svg>
-            </button>
-
-
-            <ul class="submenu-nav-header">
-                <li class="my-cab-menu first"><a href="#my-ads">Мої оголошення</a>
-                </li>
-                <li class="my-cab-menu second"><a href="#best">Обране</a></li>
-            </ul>
 
             <button type="button" class="login-button" aria-controls="login" data-search-button>
                 <svg width="20" height="20" aria-label="Вход в личный кабинет" class="icon-header-login">
@@ -110,15 +83,13 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="header-nav-list desktop login" data-auth-button>
-                        <a href="#registration">
+                    <button class="header-nav-list desktop login" data-auth-button>
                             <svg width="20" height="20" aria-label="Регистрация" class="icon-submenu-registration">
                                 <use class="icon-x" href="./images/icomoon/sprite.svg#icon-header-man">
                                 </use>
                             </svg>
                             Реєстрація / Увійти
-                        </a>
-                    </li>
+                    </button>
                     <li class="header-nav-list" >
                         <a href="#property">Нерухомість</a>
                     </li>
