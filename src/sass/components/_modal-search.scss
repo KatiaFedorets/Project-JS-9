@@ -21,63 +21,105 @@ body.show-modal .modal {
   // visibility: visible;
   //   pointer-events: initial;
   //   pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
 }
 
-.modal {
+.modal-search {
   position: relative;
-  padding-top: 50px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  max-width: 290px;
-  min-height: 152px;
   background-color: #ff6b09;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 
- 
+  @media screen and (min-width: $mobile) {
+    width: 290px;
+    height: 152px;
 
-
-  @media screen and (min-width: 768px) {
-    max-width: 650px;
-    min-height: 230px;
+    padding: 49px 20px 60px 18.5px;
   }
 
-  @media screen and (min-width: 1280px) {
-    max-width: 860px;
+  @media screen and (min-width: $tablet) {
+    width: 650px;
+    height: 230px;
+
+    padding: 94px 50px 94px 50px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 860px;
+    padding: 105px 94px;
   }
 }
 
-.search-field {
+.search-input {
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px 20px;
+
   background-color: #ff6b09;
 
   border: none;
   border-bottom: 1px solid #000000;
   outline: none;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 1.17;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  @media screen and (min-width: $mobile) {
+    padding: 7px 6px;
+  }
+  @media screen and (min-width: $tablet) {
+    padding: 7px 20px;
+  }
 }
 
-.search-field::placeholder {
+.search-input::placeholder {
   text-transform: uppercase;
+  margin-right: 3px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 1.16;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  opacity: 0.5;
 }
 
 .button-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
-
   display: flex;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  outline: none;
+
+  @media screen and (min-width: $mobile) {
+    top: -6px;
+    right: -6px;
+  }
+  @media screen and (min-width: $tablet) {
+    top: -9px;
+    right: -12px;
+  }
+  @media screen and (min-width: $desktop) {
+    top: -5px;
+    right: -5px;
+  }
+}
+.button-close :hover {
+  fill: black;
 }
 
 .icon-close {
@@ -86,4 +128,90 @@ body.show-modal .modal {
 
   width: 24px;
   height: 24px;
+  fill: #ffffff;
+}
+
+.button-magnifire {
+  width: 1px;
+  height: 1px;
+}
+.icon-modal-search-magnifer {
+  fill: #ffffff;
+  position: absolute;
+  @media screen and (min-width: $mobile) {
+    right: 35px;
+    top: 66px;
+  }
+  @media screen and (min-width: $tablet) {
+    right: 70px;
+    top: 110px;
+  }
+  @media screen and (min-width: $desktop) {
+    right: 115px;
+    top: 118px;
+  }
+}
+.icon-modal-search-magnifer:hover {
+  fill: black;
+}
+
+.cards-group-search {
+  margin-top: 30px;
+}
+.card-template-search {
+  background-color: #fff;
+  box-shadow: (0px 2px 4px rgba(0, 0, 0, 0.1));
+  width: 290px;
+  height: 350px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 4 * 10px) / 2);
+    margin-right: 20px;
+    margin-bottom: 55px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 8 * 10px) / 4);
+  }
+
+  // &:last-child {
+  // margin-right: 0;
+  // }
+}
+.photo-card__image {
+  display: block;
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.overlay-button-follscreen {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  // background-image: url('../images/sprite.svg#icon-fullscreen');
+  content: '';
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay-icon-follscreen {
+  display: block;
+  content: '';
+  height: 50px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.icon-img {
+  background-size: contain;
+}
+.contane-svg {
+  background-size: contain;
+  z-index: 1000;
+  position: relative;
+  width: 16px;
+  height: 16px;
 }

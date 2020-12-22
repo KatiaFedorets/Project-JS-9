@@ -1,11 +1,22 @@
 <div class="backdrop js-backdrop">
-    <div class="modal">
+    <div class="modal-search">
         <button type="button" class="button-close" data-action="close-modal-search">
             <svg class="icon-close">
                 <use href="./images/symbol-defs.svg#icon-close"></use>
             </svg>
         </button>
-        <input type="text" class="search-field" placeholder="Пошук" />
+        <form>
+           
+            <input type="text" class="search-input" placeholder="Пошук" />
+            <button tupe="button" class="button-magnifire" data-action="button-magnifire-on-search-modal">
+                <svg width="24" height="24" aria-label="Поиск товаров" class="icon-modal-search-magnifer">
+                    <use class="icon-search" href="./images/icomoon/sprite.svg#icon-header-search"></use>
+                </svg>
+            </button>
+            <p class="text-for-status-no-ok"></p>
+        </form>
+      
+       
     </div>
 </div>
 </div>

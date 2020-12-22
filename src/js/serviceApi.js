@@ -87,3 +87,9 @@ export const getPageSearchQuery = searchQuery => {
     return axios(`${BASE_URL}/call/find?search=${searchQuery}`);
 };
 
+
+// -----------------
+export const getPageSearchQuerySpecific = searchQuery => {
+    console.log(searchQuery);
+    return axios(`${BASE_URL}/call/specific/${searchQuery}`);
+};
