@@ -19,6 +19,8 @@ export function onCloseModal() {
     document.body.classList.remove('show-modal');
 }
 
+
+
 export function onBackdropClick(event) {
     if (event.currentTarget === event.target) {
         onCloseModal();

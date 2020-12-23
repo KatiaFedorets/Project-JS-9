@@ -1,4 +1,4 @@
-{{#each this}}
+{{!-- {{#each this}}
 <li class="product-card">
     <div class="product-card-container">
         <a class="product-card-link" href="">
@@ -15,4 +15,42 @@
         </a>
     </div>
 </li>
-{{/each}}
+{{/each}} --}}
+<ul class="cards-group cards-group-search">
+
+    {{#each this}}
+
+    <li class="card-template-search">
+
+        <a class="product-card-link" href="">
+            <div class="card-image">
+
+                <img class="photo-card__image" src="{{imageUrls}}" alt="{{description}}" />
+                <div class="card-overlay">
+                    <button class="icon-favorite">
+                        <svg class="icon" width="16" height="16">
+                            <use href="../images/symbol-defs.svg#icon-heart-favorite"></use>
+                        </svg>
+                    </button>
+                    <button class="icon-fullscreen">
+                        <svg class="icon" width="16" height="16">
+                            <use href="../images/sprite.svg#icon-fullscreen"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-content">
+                <p class="product-name">{{title}}</p>
+                <div class="product-content-price">
+                    <p class="product-price">{{oldPrice}} грн</p>
+                    <p class="product-presale-price">{{price}} грн</p>
+                </div>
+
+            </div>
+        </a>
+
+    </li>
+    {{/each}}
+
+</ul>
