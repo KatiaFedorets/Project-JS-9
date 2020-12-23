@@ -12,14 +12,14 @@ button {
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 768px) and (max-width: 1259px) {
-    max-width: 768px;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    max-width: $tablet;
     padding-left: 22px;
     padding-right: 22px;
   }
 
-  @media screen and (min-width: 1260px) {
-    max-width: 1260px;
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -35,13 +35,13 @@ button {
   align-items: center;
 
   position: relative;
-  border-bottom: 1px solid #e2e3e5;
+  border-bottom: 1px solid $background-color;
 }
 
 // Navigation
 
 .logo-header {
-  font-family: Montserrat;
+  font-family: $font-secondary;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -55,11 +55,22 @@ button {
   margin-right: auto;
   padding: 25px;
 
-  color: #000000;
-  @media screen and (min-width: 768px) {
-    margin-left: auto;
+  transition: color 250ms ease-in-out;
+
+  color: $primary-color;
+
+  @media screen and (min-width: $tablet) {
     margin-right: 0;
   }
+  @media screen and (min-width: $desktop) {
+    margin-right: auto;
+    margin-left: 500px;
+  }
+}
+
+.logo-header:hover,
+.logo-header:focus {
+  color: $orange;
 }
 
 // Logo
@@ -69,45 +80,46 @@ button {
     display: none;
   }
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
   }
-
-  margin-left: 60px;
-  // display: block;
-  // z-index: 2;
-
-  // transform: translate(-397px, 151px);
-}
-
-.login-button.is-open {
-  // display: block;
-  // z-index: 2;
-}
-
-.login-button-tablet {
-  min-width: 130px;
   cursor: pointer;
-  @media screen and (max-width: 1259px) {
-    display: none;
+  margin-left: 60px;
+
+  &:hover .icon-man,
+  &:focus .icon-man {
+    fill: $orange;
   }
-  margin-right: 20px;
-  margin-left: 230px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.17;
 
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  &-tablet {
+    min-width: 130px;
+    cursor: pointer;
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+    margin-right: 20px;
+    margin-left: 230px;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
 
-  color: #000000;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: $primary-color;
+    transition: color 250ms ease-in-out;
+  }
+}
+
+.login-button-tablet:hover,
+.login-button-tablet:focus {
+  color: $orange;
 }
 
 .create-ad {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+  font-family: $font-primary;
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
@@ -121,73 +133,166 @@ button {
 
   min-width: 188px;
   cursor: pointer;
+
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+
   @media screen and (max-width: 767px) {
     display: none;
   }
+}
+
+.create-ad:hover,
+.create-ad:focus {
+  color: $primary-color;
+  background-color: #35f045;
 }
 
 .search-button {
   cursor: pointer;
-  
-  
+  // fill: $primary-color;
+  transition: fill 250ms ease-in-out;
+
   @media screen and (max-width: 767px) {
     display: block;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     position: absolute;
   }
 }
 
-// .search-button-tablet {
-//   @media screen and (max-width: 767px) {
-//     display: none;
-//   }
-// }
+.icon-search {
+  fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
+}
+
+.search-button:hover .icon-search,
+.search-button:focus .icon-search {
+  fill: $orange;
+}
 
 .menu-button {
   padding: 25px;
-  border-right: 1px solid #e2e3e5;
+  border-right: 1px solid $background-color;
+  cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     transform: translateY(100%);
   }
 
-  @media screen and (min-width: 1260px) {
-    // display: none;
-    visibility: hidden;
-    // transform: scale(0);
+  &-tablet {
+    padding: 25px;
+
+    border-right: 1px solid $background-color;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &-desktop {
+    cursor: pointer;
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+
+    &:hover .icon-arrow,
+    &:focus .icon-arrow {
+      fill: $orange;
+    }
+
+    &.is-logout {
+      display: none;
+    }
+    &.is-auth {
+      display: block;
+    }
   }
 }
-
-.menu-button-tablet {
+.menu-buttons {
   padding: 25px;
+  border-right: 1px solid $background-color;
+  cursor: pointer;
 
-  border-right: 1px solid #e2e3e5;
+  @media screen and (min-width: $tablet) {
+    transform: translateY(100%);
+  }
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
+  }
+
+  &-tablet {
+    padding: 25px;
+
+    border-right: 1px solid $background-color;
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &-desktop {
+    cursor: pointer;
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+
+    &:hover .icon-arrow,
+    &:focus .icon-arrow {
+      fill: $orange;
+    }
+
+    &.is-logout {
+      display: none;
+    }
+    &.is-auth {
+      display: block;
+    }
   }
 }
 
-.menu-button-desktop {
-  @media screen and (max-width: 1259px) {
-    display: none;
-  }
+.icon-open {
+  fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
+}
+
+.menu-button:hover .icon-open,
+.menu-button:focus .icon-open {
+  fill: $orange;
 }
 
 .button-cleanup {
-  height: 70px;
+  height: 64px;
   display: none;
 
-  @media screen and (min-width: 768px) {
+  transition: color 250ms ease-in-out;
+
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet) {
     display: block;
-    transform: translate(550px, 89%);
+    transform: translate(550px, 100%);
     min-width: 157px;
     position: absolute;
   }
-  @media screen and (min-width: 1260px) {
-    transform: translate(1055px, 60px);
+  @media screen and (min-width: $desktop) {
+    transform: translate(1054px, 61px);
+    height: 52px;
+    padding: 10px;
+    min-width: 177px;
   }
+}
+
+.button-cleanup:hover .cleanup-span,
+.button-cleanup:focus-within .cleanup-span {
+  color: $orange;
+}
+
+.button-cleanup:hover .icon-header-circle,
+.button-cleanup:focus-within .icon-header-circle {
+  fill: $orange;
 }
 
 .icon-cleanup {
@@ -196,7 +301,7 @@ button {
 }
 
 .cleanup-span {
-  font-family: Montserrat, sans-serif;
+  font-family: $font-secondary;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -204,14 +309,20 @@ button {
 
   letter-spacing: 0.03em;
 
-  color: #000000;
+  color: $primary-color;
+
+  transition: color 250ms ease-in-out;
 }
 
 .icon-header-circle {
-  fill: #000000;
+  fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
 }
 .icon-man {
-  fill: #000000;
+  fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
 }
 
 .menu-button .icon-close {
@@ -219,13 +330,13 @@ button {
 }
 
 .button-header {
-  color: #ffffff;
+  color: $whitetext;
 
   @media screen and (max-width: 767px) {
     color: inherit;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1259px) {
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
     margin-bottom: 20px;
   }
 }
@@ -235,12 +346,12 @@ button {
   position: absolute;
   top: 50%;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: block;
     right: 39px;
   }
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     right: 15px;
   }
 }
@@ -249,34 +360,48 @@ button {
   position: absolute;
   right: 0;
   top: 0;
+  color: $primary-color;
 
-  @media screen and (min-width: 768px) {
-    border-right: 1px solid #e2e3e5;
+  transition: fill 250ms ease-in-out;
+
+  @media screen and (min-width: $tablet) {
+    border-right: 1px solid $background-color;
   }
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
   }
+}
+
+.icon-x {
+  fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
+  // @media screen and (min-width: $desktop) {
+  //   display: none;
+  // }
+}
+
+.close-button:hover .icon-x,
+.close-button:focus .icon-x {
+  fill: $orange;
 }
 
 // Backdrop MENU
 
 .content {
   position: absolute;
-  @media screen and (max-width: 1259px) {
+  @media screen and (max-width: 1279px) {
     display: none;
 
     top: 0;
     right: 100%;
 
-    // background-color: $alternative-tittle-color;
-
     height: 100%;
-    width: 100%;
 
     padding-top: 70px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       display: none;
       width: 45%;
     }
@@ -285,15 +410,24 @@ button {
   &.is-open {
     z-index: 1;
     left: 0;
-    height: auto;
     display: block;
+    background-color: $grey;
+    position: fixed;
+    top: 0;
+    min-width: 338px;
 
-    background-color: #f5f6fb;
-
-    @media screen and (min-width: 1260px) {
+    @media screen and (min-width: $desktop) {
       background-color: transparent;
+      left: auto;
+      top: auto;
     }
   }
+}
+
+.icon-arrow {
+  fill: $primary-color;
+
+  transition: fill 250ms ease-in-out;
 }
 
 .menu-button.is-open {
@@ -303,36 +437,44 @@ button {
   transition: color 250ms linear;
   border: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     top: 0;
-    // border-right: 1px solid #e2e3e5;
   }
-}
+  @media screen and (min-width: $desktop) {
+    transform: translate(70px, -28px);
+    border-left: 1px solid $background-color;
+  }
 
-.menu-button.is-open .icon-close {
-  display: block;
-}
+  &:hover .icon-arrow,
+  &:focus .icon-arrow {
+    fill: $orange;
+  }
 
-.menu-button.is-open .icon-open {
-  display: none;
+  &.is-logout {
+    display: none;
+  }
+
+  &.is-auth {
+    display: block;
+  }
 }
 
 // List  BACKDROP MENU
 
 .header-nav-ul {
-  font-family: Roboto, sans-serif;
+  font-family: $font-primary;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: #000000;
+  color: $primary-color;
 
-  border-top: 1px solid #e2e3e5;
-  border-right: 1px solid #e2e3e5;
+  border-top: 1px solid $background-color;
+  border-right: 1px solid $background-color;
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
     flex-direction: row;
     transform: translate(30px, 65px);
@@ -340,46 +482,29 @@ button {
     border: none;
   }
 }
+.header-nav-ul button {
+  color: $primary-color;
+  transition: color 250ms ease-in-out;
+}
+
+.header-nav-ul button:hover,
+.header-nav-ul button:focus,
+.header-nav-ul a:hover,
+.header-nav-ul a:focus {
+  color: $orange;
+}
 
 .header-tablet-nav {
   @media screen and (max-width: 767px) {
     display: none;
   }
   position: absolute;
-  border-bottom: 1px solid #e2e3e5;
-}
-
-.header-nav-list.desktop {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.14;
-  // display: flex;
-  // align-items: center;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #000000;
-  @media screen and (min-width: 1260px) {
-    display: none;
-  }
-}
-
-.header-nav-list.desktop.my-cab {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-
-  letter-spacing: 0.02em;
-
-  color: #000000;
+  border-bottom: 1px solid $background-color;
 }
 
 .header-nav-list {
-  @media screen and (max-width: 1259px) {
-    font-family: Roboto, sans-serif;
+  @media screen and (max-width: 1279px) {
+    font-family: $font-primary;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -387,15 +512,15 @@ button {
 
     letter-spacing: 0.02em;
 
-    color: #000000;
+    color: $primary-color;
 
-    border-bottom: 1px solid #e2e3e5;
+    border-bottom: 1px solid $background-color;
     padding: 26px;
     padding-left: 34px;
   }
 
-  @media screen and (min-width: 1260px) {
-    font-family: Roboto, sans-serif;
+  @media screen and (min-width: $desktop) {
+    font-family: $font-primary;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -403,12 +528,84 @@ button {
     text-align: center;
     letter-spacing: 0.02em;
 
-    color: #000000;
+    color: $primary-color;
+  }
+
+  &.desktop {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    width: 224px;
+    color: $primary-color;
+    @media screen and (min-width: $desktop) {
+      display: block;
+    }
+
+    &.login {
+      display: block;
+
+      @media screen and (min-width: $desktop) {
+        position: absolute;
+
+        transform: translate(800px, -93px);
+      }
+
+      &.is-logout {
+        display: none;
+      }
+
+      &.is-auth {
+        display: block;
+      }
+    }
+
+    &.my-cab {
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 1.14;
+
+      letter-spacing: 0.02em;
+
+      color: $primary-color;
+
+      @media screen and (min-width: $desktop) {
+        position: absolute;
+        transform: translate(720px, -90px);
+        // padding: 20px;
+        margin-right: 0;
+        // width: 125px;
+      }
+
+      & a {
+        @media screen and (min-width: $desktop) {
+          padding-top: 20px;
+          padding-left: 20px;
+          padding-bottom: 20px;
+        }
+      }
+
+      &.is-logout {
+        display: none;
+      }
+      &.is-auth {
+        display: block;
+      }
+    }
   }
 }
 
+// .header-nav-list.desktop.login.is-hidden {
+//   display: none;
+// }
+
 .header-nav-list:not(:last-child) {
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     margin-right: 36px;
   }
 }
@@ -416,41 +613,44 @@ button {
 // Submenu
 
 .submenu-nav {
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: #000000;
+
+  width: 170px;
   padding: 20px;
 
   transform: translateX(10px);
-}
-
-.submenu-nav-header {
-  position: absolute;
-  padding: 20px;
-  min-width: 206px;
-
-  background: #f5f6fb;
-  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
-
-  transform: translate(827px, 84px);
-
-  z-index: 3;
   display: none;
 
-  @media screen and (max-width: 1259px) {
-    display: none;
+  @media screen and (min-width: $desktop) {
+    width: auto;
+    padding: 0;
+    transform: translate(7px, 5px);
+    min-width: 206px;
+    background: #f5f6fb;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+    text-align: left;
   }
 }
 
-.submenu-nav-header.focus {
+.header-nav-list:focus-within .submenu-nav,
+.header-nav-list:focus-within .icon-submenu-uparrow {
   display: block;
 }
 
-// .submenu-login {
-//   padding: 20px;
-//   position: absolute;
-//   transform: translate(-60px, 15px);
-// }
+.header-nav-list:focus-within .icon-submenu-downarrow {
+  display: none;
+}
 
 .my-cab-menu {
-  font-family: Roboto, sans-serif;
+  font-family: $font-primary;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -458,32 +658,31 @@ button {
 
   letter-spacing: 0.02em;
 
-  color: #000000;
+  color: $primary-color;
 }
 
 .my-cab-menu:not(:last-child) {
   margin-bottom: 20px;
-}
-
-.my-cab-menu.first {
-}
-.my-cab-menu.second {
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .icon-submenu-uparrow {
-  transform: translate(190px, 25px);
+  transform: translate(150px, -20px);
   position: absolute;
+  display: none;
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
   }
 }
 
 .icon-submenu-downarrow {
-  transform: translate(190px, 25px);
+  transform: translate(150px, -20px);
   position: absolute;
 
-  @media screen and (min-width: 1260px) {
+  @media screen and (min-width: $desktop) {
     display: none;
   }
 }
@@ -493,11 +692,12 @@ button {
 }
 
 .header-my-cab {
+  cursor: pointer;
   width: auto;
   padding: 25px;
-  border-right: 1px solid #e2e3e5;
+  border-right: 1px solid $background-color;
 
-  font-family: Roboto, sans-serif;
+  font-family: $font-primary;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -507,12 +707,28 @@ button {
   text-transform: uppercase;
 
   margin-left: 221px;
-  // margin-right: 18px;
 
-  @media screen and (max-width: 1259px) {
+  color: $primary-color;
+
+  transition: color 250ms ease-in-out;
+
+  @media screen and (max-width: 1279px) {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  &.is-logout {
+    display: none;
+  }
+  &.is-auth {
+    display: block;
+  }
 }
-// .header-my-cab:focus .submenu-nav-header {
-//   display: block;
-// }
+
+.block {
+  display: block;
+}

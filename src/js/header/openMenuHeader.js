@@ -1,5 +1,5 @@
 function openMenu() {
-  const menuBtnRef = document.querySelector('.menu-button');
+  const menuBtnRef = document.querySelector('.menu-buttons');
   const mobileMenuRef = document.querySelector('.content');
 
   menuBtnRef.addEventListener('click', () => {
@@ -16,5 +16,4 @@ function closeMenu() {
     mobileMenuRef.classList.remove('is-open');
   });
 }
-
 closeMenu();

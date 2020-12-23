@@ -184,11 +184,14 @@
 }
 
 .add-modal-textarea {
+  padding: 15px;
+  appearance: none;
+  text-rendering: inherit;
   resize: vertical;
 }
 
-.input-select {
-  padding: 10px;
+.add-modal-select {
+  padding: 15px;
 }
 
 .add-photo-input-container {

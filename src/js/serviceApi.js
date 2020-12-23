@@ -55,6 +55,11 @@ export const postAds = newAds => {
     return axios.post(`${BASE_URL}/call`, newAds);
 };
 
+// export const postAds = advertData => {
+//     const { title, description, price, phone, files } = advertData;
+//     return axios.post(`${BASE_URL}/call`, { title, description, price, phone, files })
+// };
+
 // получает список всех катигорий товаров
 
 export const getCategoriesList = () => {

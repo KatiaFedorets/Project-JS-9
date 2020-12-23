@@ -1,6 +1,9 @@
-const openModalAuthorization = document.querySelector('.login-button-tablet');
-const closeModalAuthorization = document.querySelector('.authorization-button-close');
-const modalAuthorization = document.querySelector("[data-modal]");
+// const openModalAuthorization = document.querySelector('.login-button-tablet');
+const openModalAuthorization = document.querySelector('[data-auth-button]');
+const closeModalAuthorization = document.querySelector(
+  '.authorization-button-close',
+);
+const modalAuthorization = document.querySelector('[data-modal]');
 
 const backdrop = document.querySelector('.backdrop-authorization');
 
@@ -8,7 +11,6 @@ openModalAuthorization.addEventListener('click', onOpenModalAuthorization);
 closeModalAuthorization.addEventListener('click', onCloseModalAuthorization);
 // window.addEventListener('keypress', toggleModal);
 backdrop.addEventListener('click', onBackdropClick);
-
 
 // function toggleModal() {
 //     document.body.classList.toggle("modal-open");
@@ -21,18 +23,15 @@ backdrop.addEventListener('click', onBackdropClick);
 //     }
 //   }
 
-
-function onOpenModalAuthorization() {
+export function onOpenModalAuthorization() {
   window.addEventListener('keydown', onEscKeyPress);
-  modalAuthorization.classList.toggle("is-hidden");
-
+  modalAuthorization.classList.toggle('is-hidden');
 }
 
 export function onCloseModalAuthorization() {
   window.removeEventListener('keydown', onEscKeyPress);
-  modalAuthorization.classList.add("is-hidden");
+  modalAuthorization.classList.add('is-hidden');
 }
-
 
 function onBackdropClick(event) {
   if (event.currentTarget === event.target) {

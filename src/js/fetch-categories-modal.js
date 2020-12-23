@@ -1,20 +1,22 @@
-// import {getCategoriesList} from './serviceApi';
+import {getCategoriesList} from './serviceApi';
 
-// import categoriesOptionTpl from '../templates/categories-option.hbs';
+import categoriesOptionTpl from '../templates/categories-option.hbs';
 
-// const optionsSelect = document.querySelector('.js-options-select');
+const optionsSelect = document.querySelector('.js-options-select');
 
+function fetchCategoriesOptions() {
+  const url = 'https://callboard-backend.herokuapp.com/call/categories';
+  return fetch(url).then(response => response.json()).then(renderCategoriesOptions);
+}
 
-// function fetchCategoriesOptions() {
-//   const url = 'https://callboard-backend.herokuapp.com/call/categories';
-//   return fetch(url).then(response => response.json()).then(renderCategoriesOptions);
-// }
+function renderCategoriesOptions(categories) {
+  const markupList = categoriesOptionTpl(categories);
+  optionsSelect.innerHTML = markupList;
+  // console.log(markupList);
+}
 
-// function renderCategoriesOptions(categories) {
-//   const markupList = categoriesOptionTpl(categories);
-//   optionsSelect.innerHTML = markupList;
-// }
-// fetchCategoriesOptions();
+fetchCategoriesOptions();
+
 
 // const refs = {
 //   openModalBtn: document.querySelector('[data-open-modal]'),
